@@ -62,18 +62,26 @@ const LoginPage = () => {
     setUserPassword(e.target.value)
   }
 
+  const handleLoginEmail = (e) => {
+    setUserEmail(e.target.value);
+  }
+
+  const handleLoginPassword = (e) => {
+    setUserPassword(e.target.value);
+  };
+
   return (
     <>
       <Header/>
       <Input
         name={'Email Address '}
-        value={ name }
-        onChange={ null }
+        value={ userEmail }
+        onChange={ handleLoginEmail }
       />
       <Input
         name={'Password '}
-        value={ name }
-        onChange={ null }
+        value={ userPassword }
+        onChange={ handleLoginPassword }
       />
       <Card
         text={ 'Login ' }

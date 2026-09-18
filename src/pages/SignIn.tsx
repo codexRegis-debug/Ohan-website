@@ -178,7 +178,7 @@ export const Form = ({
 export const Input = ({ name, value, onChange }) => {
   return (
     <>
-      <div style={{ marginTop: '40px', marginLeft: '30px', maxWidth: '300px', color: 'grey' }}>
+      <div style={{ marginTop: '40px', marginLeft: '30px', maxWidth: '300px', color: 'white' }}>
         <br/>
         { name }
       </div>
