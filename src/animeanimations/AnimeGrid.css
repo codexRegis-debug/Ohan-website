@@ -1,0 +1,20 @@
+
+
+.circle {
+  margin: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 80px;
+  background-color: purple;
+}
+
+@media screen and (max-width: 950px) {
+  .animegrid {
+    display: grid;
+    grid-template-rows:  1fr 1fr ;
+    grid-template-columns1: 1fr 1fr;
+    width: 400px;
+    height: 400px;
+    gap: 10px;
+  }
+}

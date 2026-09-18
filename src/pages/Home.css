@@ -1,0 +1,220 @@
+* {
+  justify-content: center;
+  align-items: center;
+
+
+}
+.circle {
+  margin-left: 10px;
+  margin: 0px;
+  padding: 20px;
+  border-radius: 100px;
+  background-color: purple;
+  width: 10px;
+  height: 10px;
+}
+
+.heading-color {
+  background: linear-gradient(90deg, white 10%, #7e22ce 90%);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.white-glow {
+  font-weight: 900;
+  display: flex;
+  text-align: center;
+  width: 80%;
+  height: 60px;
+  margin-top: 20px;
+  border-radius: 40px;
+  background-color: #fff;
+  border: 2px solid #fff;
+
+  box-shadow:
+    0 0 1px #fff,
+    0 0 2px #fff,
+    0 0 4px #fff,
+    0 0 8px #fff;
+
+
+}
+
+.SignUpLink {
+  text-decoration: none;
+  width: 80%;
+  height: 60px;
+  display: flex;
+
+}
+
+.box-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 16px;
+  width: 100%;
+  text-align: center;
+}
+
+.text-grid {
+  display: grid
+}
+
+.text-1 {
+  background: linear-gradient(90deg, white 20%, #7e22ce 90%);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.text-2 {
+  background: linear-gradient(90deg, #7e22ce 20%, #7e22ce 80%);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.diff-colour {
+  background: linear-gradient(90deg, white 40%, #7e22ce 80%);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.second-text {
+  background: linear-gradient(90deg, white 20%, #7e22ce 80%);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.third-text {
+  background: linear-gradient(90deg, #7e22ce 20%, #7e22ce 80%);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.another-text {
+  background: linear-gradient(90deg, white 20%, #7e22ce 80%);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-weight: bold;
+}
+
+.this-text {
+  margin-top: 20px;
+  font-size: 20px;
+  color: grey;
+}
+
+.purple-heading {
+  background: linear-gradient(90deg, white 55%, #7e22ce 80%);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-weight: bold;
+}
+
+
+.h-text {
+  margin-top: 30px;
+  font-size: 40px;
+  background: linear-gradient(90deg, white 55%, #7e22ce 80%);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-weight: bold;
+
+}
+
+.h1-text {
+  font-size: 40px;
+}
+
+.p-text {
+  margin-top: 20px;
+  color: grey;
+
+  background: linear-gradient(90deg, grey 55%, white 80%);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-weight: bold;
+
+}
+
+.p1-text {
+  color: gray;
+}
+
+.some-text {
+  margin-left: 130px;
+
+}
+
+.purple-text {
+  background: linear-gradient(90deg, white 10%, #7e22ce 50%);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-weight: bold;
+}
+
+.white-div {
+  font-weight: 900;
+  display: flex;
+  text-align: center;
+  width: 80%;
+  height: 60px;
+  margin-top:20px;
+  text-decoration: none;
+  border-radius: 40px;
+  background-color: #fff;
+  border: 2px solid #fff;
+  color: black;
+  font-size: 22px;
+
+  box-shadow:
+    0 0 1px #fff,
+    0 0 2px #fff,
+    0 0 4px #fff,
+    0 0 8px #fff;
+
+
+}

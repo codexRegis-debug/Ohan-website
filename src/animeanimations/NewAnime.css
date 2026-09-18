@@ -1,0 +1,14 @@
+.myBall{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35vh;
+  width: 100%;
+}
+
+.ball {
+  width: 500px;
+  height: 200px;
+  background: #4f46e5;
+  padding-top: 20px;
+}
