@@ -11,18 +11,19 @@ import SignIn from './pages/SignIn.jsx';
 import LoginPage from './pages/LoginPage.tsx';
 
 const App = () => {
-  const [clicked, isClicked] = useState(false)
+  const [clicked, isClicked] = useState<boolean>(false)
   return (
     <>
       <Router>
         <Navbar clicked={clicked} isClicked={isClicked}/>
-        {clicked ? <Menu/> : null}
+        { clicked ? <Menu/> : null }
         <Routes>
           <Route path="" element={<Home/>}/>
           <Route path="contact-us" element={<ContactUs/>}/>
           <Route path="about-us" element={<AboutUs/>}/>
           <Route path="sign-in" element={<SignIn/>}/>
           <Route path="log-in" element={<LoginPage/>}/>
+          <Route path="sign-up" element={<SignIn/>}/>
         </Routes>
       </Router>
     </>
