@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom';
 import { useMutation } from '@tanstack/react-query';
 import './SignIn.css';
 import './LoginPage.tsx';
+import LoadingPage from './LoadingPage.tsx'
 
 type SignInUser = {
   username: string
@@ -32,7 +33,7 @@ const signInUser = async (credentials: SignInUser) => {
   if (!response.ok) {
     throw new Error('Sign In failed')
   };
-  
+
   return response.json()
 
 };
@@ -135,6 +136,9 @@ const SignIn = () => {
       <br/>
       <br/>
       <SendToLoginPage/>
+      <br/>
+      <br/>
+      <LoadingPage/>
     </>
   )
 };

@@ -9,6 +9,7 @@ import ContactUs from './pages/ContactUs.jsx';
 import AboutUs from './pages/AboutUs.jsx';
 import SignIn from './pages/SignIn.jsx';
 import LoginPage from './pages/LoginPage.tsx';
+import LoadingPage from './pages/LoadingPage.tsx';
 
 const App = () => {
   const [clicked, isClicked] = useState<boolean>(false)
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="sign-in" element={<SignIn/>}/>
           <Route path="log-in" element={<LoginPage/>}/>
           <Route path="sign-up" element={<SignIn/>}/>
+          <Route path="load-in" element={<LoadingPage/>}/>
         </Routes>
       </Router>
     </>
