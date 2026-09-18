@@ -2,16 +2,20 @@
 import { useState, useEffect } from 'react'
 
 export default function useOnlineStatus() {
-  const [isOnline, setisOnline] = useState(true)
+  const [isOnline, setIsOnline] = useState<boolean>(true)
+
   useEffect(() => {
     function handleOnline() {
-      setisOnline(true)
+      setIsOnline(true)
     }
+
     function handleOffline() {
-      setisOnline(false)
+      setIsOnline(false)
     }
+
     window.addEventListener('online', handleOnline)
     window.addEventListener('offline', handleOffline)
+
     return () => {
       window.removeEventListener('online', handleOnline)
       window.removeEventListener('offline', handleOffline)

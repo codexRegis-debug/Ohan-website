@@ -13,6 +13,7 @@ const LoadingPage = () => {
         width: '100%',
         height: '100%',
         backgroundColor: 'black',
+        color: 'white',
       }}
     >
       <h1>
@@ -21,20 +22,9 @@ const LoadingPage = () => {
           ? 'Online'
           : 'Offline' /* AnimeRollingGlow */
         }
-        <SaveButton/>
       </h1>
     </div>
   )
 }
 
-const SaveButton = () => {
-  const isOnline  = useOnlineStatus()
-
-  return (
-    <button disabled={ !isOnline } onClick={ saveButton } >
-      LoadingPage
-    </button>
-  )
-}
-
-export default  LoadingPage
+export default LoadingPage

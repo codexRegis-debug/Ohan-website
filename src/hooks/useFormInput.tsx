@@ -1,13 +1,19 @@
 /**/
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
-const useFormInput = (value, setValue) => {
-  const [value, setValue] = useState<string>('')
-  useEffect(() => {
-    const handleLogin = (event) => {
-      event.preventDefault()
+const useFormInput = (initialValue: string) => {
+  const [value, setValue] = useState<string>(initialValue)
 
-      setValue(event.target.value)
-    }
-  }, [])
+  const handleLogin = (event) => {
+    setValue(event.target.value)
+  }
+
+  const inputProps = {
+    value: value,
+    onChange: handleLogin
+  }
+
+  return inputProps
 }
+
+export default useFormInput

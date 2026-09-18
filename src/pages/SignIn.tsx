@@ -5,7 +5,6 @@ import { NavLink } from 'react-router-dom';
 import { useMutation } from '@tanstack/react-query';
 import './SignIn.css';
 import './LoginPage.tsx';
-import LoadingPage from './LoadingPage.tsx'
 
 type SignInUser = {
   username: string
@@ -62,21 +61,18 @@ const SignIn = () => {
   }
 
   const handleLoginName = (event) => {
-    event.preventDefault();
     /*mutation.mutate({ username });*/
 
     setUsername(event.target.value);
   };
 
   const handleLoginEmail = (event) => {
-    event.preventDefault();
     /*mutation.mutate({ username });*/
 
     setUserEmail(event.target.value);
   };
 
   const handleLoginPassword = (event) => {
-    event.preventDefault();
     /*mutation.mutate({ username });*/
 
     setUserPassword(event.target.value);
@@ -124,7 +120,6 @@ const SignIn = () => {
       </div>
 
       <Form
-        onSubmit={ handleLogin }
         onLogin={ handleLogin }
         name={ username }
         password={ userpassword }
@@ -138,7 +133,7 @@ const SignIn = () => {
       <SendToLoginPage/>
       <br/>
       <br/>
-      <LoadingPage/>
+      <ExtraFooter/>
     </>
   )
 };
@@ -147,7 +142,6 @@ export const Form = ({
   name,
   password,
   email,
-  onSubmit,
   onLogin,
   onLoginName,
   onLoginEmail,
@@ -156,7 +150,7 @@ export const Form = ({
 
   return (
     <>
-      <form onClick={ onSubmit }>
+      <form >
         <Input
           name={'USERNAME'}
           value={ name }
@@ -272,6 +266,16 @@ const SendToLoginPage = () => {
         </span>
       </div>
     </>
+  )
+}
+
+const ExtraFooter = () => {
+  return (
+    <div style={{ display: 'flex', alignItems: 'center', width: '100%'  }}>
+      <NavLink className="Loading" to="/load-in" style={{ color: 'white' }}>
+        Loading page
+      </NavLink>
+    </div>
   )
 }
 
