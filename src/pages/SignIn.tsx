@@ -266,7 +266,7 @@ const SendToLoginPage = () => {
           Already have an account?
           {'  '}
           <span>
-            <NavLink className="LoginLink" to="/log-in" style={{ color: 'indigo' }}>
+            <NavLink className="LoginLink" to="/log-in" style={{ textDecoration: 'none', color: 'indigo' }}>
               Login here
             </NavLink>
           </span>
@@ -279,7 +279,7 @@ const SendToLoginPage = () => {
 const ExtraFooter = () => {
   return (
     <div style={{ display: 'flex', alignItems: 'center', width: '100%'  }}>
-      <NavLink className="Loading" to="/load-in" style={{ color: 'white' }}>
+      <NavLink className="Loading" to="/load-in" style={{ textDecoration: 'none', color: 'white' }}>
         Loading page
       </NavLink>
     </div>

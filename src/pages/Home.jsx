@@ -79,7 +79,6 @@ const Home = () => {
               <div style={{ display: 'flex', cursor: 'pointer', alignItems: 'center', width: '100%'}}>
                 <NavLink className="SignUpLink" to="/sign-in">
                   <div
-                    onClick={''}
                     className='white-glow'
                   >
                     {'Sign up For Free ->'}
