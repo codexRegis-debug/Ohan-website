@@ -61,7 +61,6 @@ const Home = () => {
         >
           <h1> Watch - Join - Get paid </h1>
         </div>
-
           <br/>
           <div className='topText' style={{marginTop:'30px', textAlign:'center', color:'white', fontSize:'24px'}}>
             <h1>Get paid to promote</h1>
@@ -69,7 +68,6 @@ const Home = () => {
             <h1>organically, from your </h1>
             <h1>phone.</h1>
             <br/>
-
           </div>
           <div style={{marginTop:'30px', textAlign:'center', fontSize:'24px'}}>
             <p style={{color: 'darkgrey'}}>Free training, real offers, a 160K+</p>
@@ -468,13 +466,23 @@ const Home = () => {
             </div>
 
             <div style={{ display: 'flex', marginTop: '100px', color: 'grey',  alignItems: 'center',gap: '16px', width: '100%'}}>
-              <FaXTwitter size={28}/>
-              <FaInstagram size={28}/>
-              <FaYoutube size={28}/>
+              <NavLink style={{ color: 'white', cursor: 'pointer' }}>
+                <FaXTwitter size={28}/>
+              </NavLink>
+              <NavLink style={{ color: 'white', cursor: 'pointer'  }}>
+                <FaInstagram size={28}/>
+              </NavLink>
+              <NavLink style={{ color: 'white', cursor: 'pointer'  }}>
+                <FaYoutube size={28}/>
+              </NavLink>
             </div>
             <div style={{ display: 'flex', marginTop: '100px', color: 'grey',  alignItems: 'center',gap: '16px', width: '100%'}}>
-              <h3>Privacy Policy</h3>
-              <h3>Terms of Service</h3>
+              <NavLink style={{ color: 'white', cursor: 'pointer'  }}>
+                <h3>Privacy Policy</h3>
+              </NavLink>
+              <NavLink style={{ color: 'white', cursor: 'pointer'  }}>
+                <h3>Terms of Service</h3>
+              </NavLink>
             </div>
             <br/>
           </div>

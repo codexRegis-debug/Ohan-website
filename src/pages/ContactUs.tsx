@@ -1,5 +1,4 @@
 /**/
-import { useRef, useEffect } from 'react';
 import NewAnime from '../animeanimations/NewAnime.jsx';
 import Effect from '../animeanimations/Effect.jsx'
 
