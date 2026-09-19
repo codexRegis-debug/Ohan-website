@@ -1,5 +1,5 @@
 /* Login Page */
-import { Input, Card } from './SignIn.jsx';
+import { GlowingHeader, Input, Card } from './SignIn.jsx';
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import { useMutation } from '@tanstack/react-query';
@@ -72,6 +72,8 @@ const LoginPage = () => {
 
   return (
     <>
+      <GlowingHeader/>
+      <br/>
       <Header/>
       <Input
         name={'Email Address '}

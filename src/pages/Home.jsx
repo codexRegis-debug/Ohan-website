@@ -466,21 +466,22 @@ const Home = () => {
             </div>
 
             <div style={{ display: 'flex', marginTop: '100px', color: 'grey',  alignItems: 'center',gap: '16px', width: '100%'}}>
-              <NavLink style={{ color: 'white', cursor: 'pointer' }}>
+              <NavLink style={{ color: 'white', cursor: 'pointer' }} to=''>
                 <FaXTwitter size={28}/>
               </NavLink>
-              <NavLink style={{ color: 'white', cursor: 'pointer'  }}>
+              <NavLink style={{ color: 'white', cursor: 'pointer' }} to=''>
                 <FaInstagram size={28}/>
               </NavLink>
-              <NavLink style={{ color: 'white', cursor: 'pointer'  }}>
+              <NavLink style={{ color: 'white', cursor: 'pointer' }} to=''>
                 <FaYoutube size={28}/>
               </NavLink>
             </div>
+
             <div style={{ display: 'flex', marginTop: '100px', color: 'grey',  alignItems: 'center',gap: '16px', width: '100%'}}>
-              <NavLink style={{ color: 'white', cursor: 'pointer'  }}>
+              <NavLink style={{ textDecoration: 'none', color: 'white', cursor: 'pointer' }} to=''>
                 <h3>Privacy Policy</h3>
               </NavLink>
-              <NavLink style={{ color: 'white', cursor: 'pointer'  }}>
+              <NavLink style={{ textDecoration: 'none', color: 'white', cursor: 'pointer'  }} to=''>
                 <h3>Terms of Service</h3>
               </NavLink>
             </div>

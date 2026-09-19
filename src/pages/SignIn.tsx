@@ -80,30 +80,7 @@ const SignIn = () => {
 
   return (
     <>
-      <div style={{ display: 'flex', alignItems: 'center', width: '100%'  }}>
-        <div
-          className='text'
-          style={{
-            backgroundColor: '#271B3D',
-            marginTop: '0.7rem',
-            width: '500px',
-            height: '80px',
-            borderRadius: '14px',
-            padding: '0.5rem 1rem',
-          }}
-        >
-          <div className='text-one'>
-            <h1 style={{ color: 'white' }}> $100M </h1>
-            <h3 style={{ color: 'grey' }}>Paid to members</h3>
-          </div>
-          <div className='text-two'>
-            <h1 style={{ color: 'white' }}> 150K </h1>
-            <h3 style={{ color: 'grey' }}>Active members</h3>
-          </div>
-        </div>
-        {/* Comment */}
-      </div>
-
+      <GlowingHeader/>
       <div style={{ display: '', alignItems: 'center', width: '100%'  }}>
         <div style={{
           left: '30px',
@@ -137,6 +114,36 @@ const SignIn = () => {
     </>
   )
 };
+
+export const GlowingHeader = () => {
+  return (
+    <>
+      <div style={{ display: 'flex', alignItems: 'center', width: '100%'  }}>
+        <div
+          className='text'
+          style={{
+            backgroundColor: '#271B3D',
+            marginTop: '0.7rem',
+            width: '500px',
+            height: '80px',
+            borderRadius: '14px',
+            padding: '0.5rem 1rem',
+          }}
+        >
+          <div className='text-one'>
+            <h1 style={{ color: 'white' }}> $100M </h1>
+            <h3 style={{ color: 'grey' }}>Paid to members</h3>
+          </div>
+          <div className='text-two'>
+            <h1 style={{ color: 'white' }}> 150K </h1>
+            <h3 style={{ color: 'grey' }}>Active members</h3>
+          </div>
+        </div>
+        {/* Comment */}
+      </div>
+    </>
+  )
+}
 
 export const Form = ({
   name,
