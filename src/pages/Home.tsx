@@ -1,15 +1,15 @@
 /**/
-import {
-  useState,
-  useRef,
-} from 'react';
+/*
+* import {
+*   useState,
+*   useRef,
+* } from 'react';
+*/
 import { FaYoutube, FaInstagram } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
-import { Link, NavLink } from 'react-router-dom';
-import AnimeAnimate from '../animeanimations/AnimeAnimate.jsx';
+import { NavLink } from 'react-router-dom';
 import NewAnime from '../animeanimations/NewAnime.jsx';
 import AnimeRotate from '../animeanimations/AnimeRotate.jsx';
-import AnimeCreate from '../animeanimations/AnimeCreate.jsx';
 import AnimeGrid from '../animeanimations/AnimeGrid.jsx';
 import './Home.css';
 import { XCircle } from 'lucide-react';
@@ -454,7 +454,7 @@ const Home = () => {
               </Effect>
               <Effect>
                 <div style={{ cursor: 'pointer', display: 'flex', marginTop: '80px',  alignItems: 'center', width: '100%'}}>
-                  <NavLink className='white-div' to='/sign-in'> Sign Up Free</NavLink>
+                  <NavLink className='white-div' to='/sign-in'> Sign Up For Free</NavLink>
                 </div>
                 <h3 style={{ color: 'grey', marginTop: '16px' }}> Takes 60 seconds. No Startup costs</h3>
               </Effect>

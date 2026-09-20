@@ -1,6 +1,6 @@
 /**/
 import './App.css';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import  Navbar  from './components/Navbar.jsx';
 import Menu from './components/Menu.jsx'
 import { useState } from 'react';

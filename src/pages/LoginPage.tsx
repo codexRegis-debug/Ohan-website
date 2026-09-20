@@ -101,7 +101,7 @@ const Header = () => {
     <>
       <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
         <div style={{ left: '30px', color: 'white', fontSize: '25px', marginLeft: '-35px' }}>
-          <h1>Welcome Back</h1>
+          <h1>Welcome Back!</h1>
         </div>
       </div>
     </>
