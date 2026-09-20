@@ -60,20 +60,20 @@ const Home = () => {
         style={{ margin: 'auto', marginTop: '20px', paddingTop: '5px', alignItems: 'center', fontWeight: '100px', justifyItems: 'center', textAlign:'center', color:'white', fontSize:'9px', width: '300px', height: '30px', backgroundColor: 'gray', borderRadius: '20px'}}
         >
           <h1> Watch - Join - Get paid </h1>
-        </div>
+      </div>
           <br/>
-          <div className='topText' style={{marginTop:'30px', textAlign:'center', color:'white', fontSize:'24px'}}>
-            <h1>Get paid to promote</h1>
-            <h1 className='heading-color'>affiliate offers </h1>
-            <h1>organically, from your </h1>
-            <h1>phone.</h1>
-            <br/>
-          </div>
-          <div style={{marginTop:'30px', textAlign:'center', fontSize:'24px'}}>
-            <p style={{color: 'darkgrey'}}>Free training, real offers, a 160K+</p>
-            <p style={{color: 'darkgrey'}}>community.</p> <p style={{color:'white'}}> Watch the 5-min video below</p>
-            <p style={{color:'white'}}>- then join free today.</p>
-          </div>
+      <div className='topText' style={{marginTop:'30px', textAlign:'center', color:'white', fontSize:'24px'}}>
+        <h1>Get paid to promote</h1>
+        <h1 className='heading-color'>affiliate offers </h1>
+        <h1>organically, from your </h1>
+        <h1>phone.</h1>
+        <br/>
+      </div>
+      <div style={{marginTop:'30px', textAlign:'center', fontSize:'24px'}}>
+        <p style={{color: 'darkgrey'}}>Free training, real offers, a 160K+</p>
+        <p style={{color: 'darkgrey'}}>community.</p> <p style={{color:'white'}}> Watch the 5-min video below</p>
+        <p style={{color:'white'}}>- then join free today.</p>
+      </div>
           <br/>
             <Effect>
               <div style={{ display: 'flex', cursor: 'pointer', alignItems: 'center', width: '100%'}}>
