@@ -152,7 +152,15 @@ export const Form = ({
   onLogin,
   onLoginName,
   onLoginEmail,
-  onLoginPassword
+  onLoginPassword,
+} : {
+  name: string,
+  password: string,
+  email: string,
+  onLogin: () => void,
+  onLoginName: () => void,
+  onLoginEmail: () => void,
+  onLoginPassword: () => void,
 }) => {
 
   return (
@@ -173,16 +181,25 @@ export const Form = ({
           value={ email }
           onChange={ onLoginEmail }
         />
-          <Card
-            text={ 'Continue' }
-            onClick={ onLogin }
-          />
-        </form>
+        <Card
+          text={ 'Continue' }
+          onClick={ onLogin }
+        />
+      </form>
     </>
   )
 }
 
-export const Input = ({ name, value, onChange }) => {
+export const Input = ({
+  name,
+  value,
+  onChange,
+} : {
+  name: string,
+  value: string,
+  onChange: () => void,
+}) => {
+
   return (
     <>
       <div style={{ marginTop: '40px', marginLeft: '30px', maxWidth: '300px', color: 'white' }}>
@@ -215,7 +232,14 @@ export const Input = ({ name, value, onChange }) => {
   )
 }
 
-export const Card = ({ text, onClick }) => {
+export const Card = ({
+  text,
+  onClick,
+} : {
+  text: string,
+  onClick: () => void ,
+}) => {
+
   return (
     <div style={{ display: 'flex', alignItems: 'center', width: '100%'}}>
       <div
@@ -253,6 +277,7 @@ export const Card = ({ text, onClick }) => {
 }
 
 const SendToLoginPage = () => {
+
   return (
     <>
       <div
@@ -277,6 +302,7 @@ const SendToLoginPage = () => {
 }
 
 const ExtraFooter = () => {
+
   return (
     <div style={{ display: 'flex', alignItems: 'center', width: '100%'  }}>
       <NavLink className="Loading" to="/load-in" style={{ textDecoration: 'none', color: 'white' }}>

@@ -1,6 +1,5 @@
 /**/
 import { useReducer, useState, useEffect } from 'react';
-import AnimeBox from '../animeanimations/AnimeBox.jsx';
 
 const API_ENDPOINT = 'https://hn.algolia.com/api/v1/search?query=';
 
