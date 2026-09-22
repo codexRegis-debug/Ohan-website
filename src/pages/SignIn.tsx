@@ -1,5 +1,5 @@
 /**/
-import { useState } from 'react';
+import { HTMLElementType, useState } from 'react';
 import { ArrowRight } from 'lucide-react'
 import { NavLink } from 'react-router-dom';
 import { useMutation } from '@tanstack/react-query';
@@ -60,19 +60,19 @@ const SignIn = () => {
 
   }
 
-  const handleLoginName = (event) => {
+  const handleLoginName = (event: HTMLElementType) => {
     /*mutation.mutate({ username });*/
 
     setUsername(event.target.value);
   };
 
-  const handleLoginEmail = (event) => {
+  const handleLoginEmail = (event: HTMLElementType) => {
     /*mutation.mutate({ username });*/
 
     setUserEmail(event.target.value);
   };
 
-  const handleLoginPassword = (event) => {
+  const handleLoginPassword = (event: HTMLElementType) => {
     /*mutation.mutate({ username });*/
 
     setUserPassword(event.target.value);
@@ -157,10 +157,10 @@ export const Form = ({
   name: string,
   password: string,
   email: string,
-  onLogin: () => void,
-  onLoginName: () => void,
-  onLoginEmail: () => void,
-  onLoginPassword: () => void,
+  onLogin: (event: HTMLElementType) => void,
+  onLoginName: (event: HTMLElementType) => void,
+  onLoginEmail: (event: HTMLElementType) => void,
+  onLoginPassword: (event: HTMLElementType) => void,
 }) => {
 
   return (
