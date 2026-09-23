@@ -1,9 +1,9 @@
 /**/
-import { HTMLElementType, useState } from 'react';
-import { ArrowRight } from 'lucide-react'
-import { NavLink } from 'react-router-dom';
+import { MouseEvent, useState } from 'react';
 import { useMutation } from '@tanstack/react-query';
-import './SignIn.css';
+import { GlowingHeader } from '../components/Headers.tsx'
+import { Footer, ExtraFooter } from '../components/Footer.tsx'
+import { Form } from '../components/Form.tsx'
 import './LoginPage.tsx';
 
 type SignInUser = {
@@ -50,7 +50,7 @@ const SignIn = () => {
     },
   });
 
-  const handleLogin = (event) => {
+  const handleLogin = (event: MouseEvent<HTMLDivElement>) => {
     event.preventDefault();
     mutation.mutate({ username, useremail, userpassword });
 
@@ -60,19 +60,19 @@ const SignIn = () => {
 
   }
 
-  const handleLoginName = (event: HTMLElementType) => {
+  const handleLoginName = (event: MouseEvent<HTMLDivElement>) => {
     /*mutation.mutate({ username });*/
 
     setUsername(event.target.value);
   };
 
-  const handleLoginEmail = (event: HTMLElementType) => {
+  const handleLoginEmail = (event: MouseEvent<HTMLDivElement>) => {
     /*mutation.mutate({ username });*/
 
     setUserEmail(event.target.value);
   };
 
-  const handleLoginPassword = (event: HTMLElementType) => {
+  const handleLoginPassword = (event: MouseEvent<HTMLDivElement>) => {
     /*mutation.mutate({ username });*/
 
     setUserPassword(event.target.value);
@@ -80,7 +80,12 @@ const SignIn = () => {
 
   return (
     <>
-      <GlowingHeader/>
+      <GlowingHeader
+        headerOne='$100M'
+        headerThree=' Paid to members'
+        headerOneAgain=' 150K '
+        headerThreeAgain=' Active members '
+      />
       <div style={{ display: '', alignItems: 'center', width: '100%'  }}>
         <div style={{
           left: '30px',
@@ -107,209 +112,18 @@ const SignIn = () => {
       />
       <br/>
       <br/>
-      <SendToLoginPage/>
+      <Footer
+        span='Already Have an Account?'
+        link='/log-in'
+        linkText='Login Here'
+      />
       <br/>
       <br/>
-      <ExtraFooter/>
+      <ExtraFooter
+        loadText='Loading page'
+      />
     </>
   )
 };
-
-export const GlowingHeader = () => {
-  return (
-    <>
-      <div style={{ display: 'flex', alignItems: 'center', width: '100%'  }}>
-        <div
-          className='text'
-          style={{
-            backgroundColor: '#271B3D',
-            marginTop: '0.7rem',
-            width: '500px',
-            height: '80px',
-            borderRadius: '14px',
-            padding: '0.5rem 1rem',
-          }}
-        >
-          <div className='text-one'>
-            <h1 style={{ color: 'white' }}> $100M </h1>
-            <h3 style={{ color: 'grey' }}>Paid to members</h3>
-          </div>
-          <div className='text-two'>
-            <h1 style={{ color: 'white' }}> 150K </h1>
-            <h3 style={{ color: 'grey' }}>Active members</h3>
-          </div>
-        </div>
-        {/* Comment */}
-      </div>
-    </>
-  )
-}
-
-export const Form = ({
-  name,
-  password,
-  email,
-  onLogin,
-  onLoginName,
-  onLoginEmail,
-  onLoginPassword,
-} : {
-  name: string,
-  password: string,
-  email: string,
-  onLogin: (event: HTMLElementType) => void,
-  onLoginName: (event: HTMLElementType) => void,
-  onLoginEmail: (event: HTMLElementType) => void,
-  onLoginPassword: (event: HTMLElementType) => void,
-}) => {
-
-  return (
-    <>
-      <form >
-        <Input
-          name={'USERNAME'}
-          value={ name }
-          onChange={ onLoginName }
-        />
-        <Input
-          name={'PASSWORD'}
-          value={ password }
-          onChange={ onLoginPassword }
-        />
-        <Input
-          name={'EMAIL'}
-          value={ email }
-          onChange={ onLoginEmail }
-        />
-        <Card
-          text={ 'Continue' }
-          onClick={ onLogin }
-        />
-      </form>
-    </>
-  )
-}
-
-export const Input = ({
-  name,
-  value,
-  onChange,
-} : {
-  name: string,
-  value: string,
-  onChange: () => void,
-}) => {
-
-  return (
-    <>
-      <div style={{ marginTop: '40px', marginLeft: '30px', maxWidth: '300px', color: 'white' }}>
-        <br/>
-        { name }
-      </div>
-      <div style={{ display: 'flex', alignItems: 'center', width: '100%'}}>
-        <div
-          style={
-            {
-              width: '80%',
-              height: '70px',
-              marginTop: '22px',
-              borderRadius: '10px',
-              display: 'flex',
-              textAlign: 'left',
-              flexGrow: '0',
-            }
-          }
-        >
-          <input
-            style={{ padding: '20px 150px', borderRadius: '20px', border: 'none', backgroundColor: '#121212', textAlign: 'left', fontSize: '15px', fontWeight: 'bold', color: 'white' }}
-            value={ value }
-            onChange={ onChange }
-          />
-        </div>
-        <br/>
-        </div>
-    </>
-  )
-}
-
-export const Card = ({
-  text,
-  onClick,
-} : {
-  text: string,
-  onClick: () => void ,
-}) => {
-
-  return (
-    <div style={{ display: 'flex', alignItems: 'center', width: '100%'}}>
-      <div
-        onClick={ onClick }
-        style={
-          {
-            width: '190px',
-            fontSize: '10px',
-            height: '70px',
-            marginTop: '24px',
-            borderRadius: '10px',
-            left: '30',
-            backgroundColor: 'indigo',
-            marginLeft: '200px',
-            flexGrow: '0',
-            cursor: 'pointer',
-            textAlign: 'center',
-            color: 'white',
-            fontWeight: 'bold',
-          }
-        }
-      >
-        <h1 style={{ marginTop: '18px', }}>
-          { text }
-        </h1>
-        <span >
-          <ArrowRight
-            size={ 20 }
-          />
-        </span>
-      </div>
-      <br/>
-    </div>
-  )
-}
-
-const SendToLoginPage = () => {
-
-  return (
-    <>
-      <div
-        style= {{
-          display: 'flex',
-          alignItems: 'center',
-          width: '100%'
-        }}
-      >
-        <span style={{color: 'white'}}>
-          Already have an account?
-          {'  '}
-          <span>
-            <NavLink className="LoginLink" to="/log-in" style={{ textDecoration: 'none', color: 'indigo' }}>
-              Login here
-            </NavLink>
-          </span>
-        </span>
-      </div>
-    </>
-  )
-}
-
-const ExtraFooter = () => {
-
-  return (
-    <div style={{ display: 'flex', alignItems: 'center', width: '100%'  }}>
-      <NavLink className="Loading" to="/load-in" style={{ textDecoration: 'none', color: 'white' }}>
-        Loading page
-      </NavLink>
-    </div>
-  )
-}
 
 export default SignIn

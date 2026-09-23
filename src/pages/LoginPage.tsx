@@ -1,8 +1,10 @@
 /* Login Page */
-import { GlowingHeader, Input, Card } from './SignIn.jsx';
-import { NavLink } from 'react-router-dom';
-import { useState } from 'react';
+import { Card } from '../components/Cards.tsx';
+import { MouseEvent, useState } from 'react';
 import { useMutation } from '@tanstack/react-query';
+import { GlowingHeader, Header } from '../components/Headers.tsx';
+import { Input } from '../components/Input.tsx'
+import { Footer } from '../components/Footer.tsx'
 
 type LoginOrSignIn = {
   userName?: string
@@ -54,7 +56,7 @@ const LoginPage = () => {
     },
   })
 
-  const handleLogin = (e) => {
+  const handleLogin = (e: MouseEvent<HTMLDivElement>) => {
     e.preventDefault()
     mutation.mutate({ userEmail, userPassword })
 
@@ -62,19 +64,26 @@ const LoginPage = () => {
     setUserPassword(e.target.value)
   }
 
-  const handleLoginEmail = (e) => {
+  const handleLoginEmail = (e: MouseEvent<HTMLDivElement>) => {
     setUserEmail(e.target.value);
   }
 
-  const handleLoginPassword = (e) => {
+  const handleLoginPassword = (e: MouseEvent<HTMLDivElement>) => {
     setUserPassword(e.target.value);
   };
 
   return (
     <>
-      <GlowingHeader/>
+      <GlowingHeader
+        headerOne='$100M'
+        headerThree=' Paid to members'
+        headerOneAgain=' 150K '
+        headerThreeAgain=' Active members '
+      />
       <br/>
-      <Header/>
+      <Header
+        children={'Welcome Back!'}
+      />
       <Input
         name={'Email Address '}
         value={ userEmail }
@@ -91,37 +100,11 @@ const LoginPage = () => {
       />
       <br/>
       <br/>
-      <Footer/>
-    </>
-  )
-}
-
-const Header = () => {
-  return (
-    <>
-      <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
-        <div style={{ left: '30px', color: 'white', fontSize: '25px', marginLeft: '-35px' }}>
-          <h1>Welcome Back!</h1>
-        </div>
-      </div>
-    </>
-  )
-}
-
-const Footer = () => {
-  return (
-    <>
-      <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
-        <span style={{color: 'white'}}>
-          Don't have an account yet?
-          {'  '}
-          <span>
-            <NavLink className="SignInLink" to="/sign-in" style={{ cursor: 'pointer', color: 'indigo' }}>
-              Sign In here
-            </NavLink>
-          </span>
-        </span>
-      </div>
+      <Footer
+        span="Don't have an account yet?"
+        link='/sign-in'
+        linkText='Sign In here'
+      />
     </>
   )
 }
