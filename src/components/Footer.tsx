@@ -28,20 +28,22 @@ export const Footer = ({
   )
 }
 
-export const ExtraFooter = ({ loadText }:{ loadText: string }) => {
+export const ExtraFooter = () => {
   const isOnline = useOnlineStatus()
   return (
     <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
-
       {isOnline
         ?(
-          <NavLink className="Loading" to="/load-in" style={{ textDecoration: 'none', color: 'white' }}>
-            { loadText }
-          </NavLink>
+          <h1>
+            {"  "}
+          </h1>
         )
-        : (<h3>Internet connection lost</h3>)
+        :(
+          <h3 style={{ color: "red" }}>
+            Internet connection lost
+          </h3>
+        )
       }
-
     </div>
   )
 }
