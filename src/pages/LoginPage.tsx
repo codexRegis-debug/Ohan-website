@@ -19,9 +19,10 @@ const enum LoginUser  {
 }
 
 const loginUsers = async (credentials: LoginOrSignIn) => {
-  const formLoginData = new URLSearchParams()
-  formLoginData.append( 'userEmail', credentials.userEmail )
-  formLoginData.append('userPassword', credentials.userPassword )
+  const formLoginData = {
+    'userEmail': credentials.userEmail,
+    'userPassword': credentials.userPassword,
+  }
 
   const responseData = await fetch('http://localhost:8000/api/login', {
     method: 'POST',

@@ -13,10 +13,11 @@ type SignInUser = {
 }
 
 const signInUser = async (credentials: SignInUser) => {
-  const formData = new URLSearchParams();
-  formData.append( 'username', credentials.username );
-  formData.append( 'userpassword', credentials.userpassword );
-  formData.append( 'useremail', credentials.useremail );
+  const formData = {
+    'username': credentials.username,
+    'userpassword': credentials.userpassword,
+    'useremail': credentials.useremail,
+  }
 
   const response = await fetch('http://localhost:8000/api/signup', {
     method: 'POST',
