@@ -1,6 +1,6 @@
 /**/
 
-import { HTMLElementType } from 'react'
+import { MouseEvent } from 'react'
 
 export const Input = ({
   name,
@@ -9,7 +9,7 @@ export const Input = ({
 } : {
   name: string,
   value: string,
-  onChange: (event: HTMLElementType) => void,
+  onChange: (event: MouseEvent) => void,
 }) => {
 
   return (

@@ -57,7 +57,7 @@ const LoginPage = () => {
     },
   })
 
-  const handleLogin = (e: MouseEvent<HTMLDivElement>) => {
+  const handleLogin = (e: MouseEvent) => {
     e.preventDefault()
     mutation.mutate({ userEmail, userPassword })
 
@@ -65,11 +65,11 @@ const LoginPage = () => {
     setUserPassword(e.target.value)
   }
 
-  const handleLoginEmail = (e: MouseEvent<HTMLDivElement>) => {
+  const handleLoginEmail = (e: MouseEvent) => {
     setUserEmail(e.target.value);
   }
 
-  const handleLoginPassword = (e: MouseEvent<HTMLDivElement>) => {
+  const handleLoginPassword = (e: MouseEvent) => {
     setUserPassword(e.target.value);
   };
 
