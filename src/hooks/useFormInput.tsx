@@ -1,10 +1,10 @@
 /**/
-import { useState } from 'react';
+import { useState, MouseEvent } from 'react';
 
-const useFormInput = (initialValue: string) => {
+export const useFormInput = (initialValue: string) => {
   const [value, setValue] = useState<string>(initialValue)
 
-  const handleLogin = (event) => {
+  const handleLogin = (event: MouseEvent<HTMLDivElement>) => {
     setValue(event.target.value)
   }
 
@@ -15,5 +15,3 @@ const useFormInput = (initialValue: string) => {
 
   return inputProps
 }
-
-export default useFormInput

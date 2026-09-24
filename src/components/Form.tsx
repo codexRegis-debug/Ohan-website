@@ -1,8 +1,7 @@
 /**/
-
 import { Input } from './Input.tsx'
 import { Card } from './Cards.tsx'
-import { HTMLElementType, MouseEvent } from 'react'
+import { MouseEvent } from 'react'
 
 export const Form = ({
   name,
@@ -17,9 +16,9 @@ export const Form = ({
   password: string,
   email: string,
   onLogin: (event: MouseEvent) => void,
-  onLoginName: (event: HTMLElementType) => void,
-  onLoginEmail: (event: HTMLElementType) => void,
-  onLoginPassword: (event: HTMLElementType) => void,
+  onLoginName: (event: MouseEvent) => void,
+  onLoginEmail: (event: MouseEvent) => void,
+  onLoginPassword: (event: MouseEvent) => void,
 }) => {
 
   return (

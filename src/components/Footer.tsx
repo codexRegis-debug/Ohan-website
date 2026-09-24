@@ -29,7 +29,6 @@ export const Footer = ({
 }
 
 export const ExtraFooter = ({ loadText }:{ loadText: string }) => {
-
   return (
     <div style={{ display: 'flex', alignItems: 'center', width: '100%'  }}>
       <NavLink className="Loading" to="/load-in" style={{ textDecoration: 'none', color: 'white' }}>

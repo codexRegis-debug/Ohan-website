@@ -51,7 +51,7 @@ const SignIn = () => {
     },
   });
 
-  const handleLogin = (event: MouseEvent<HTMLDivElement>) => {
+  const handleLogin = (event: MouseEvent) => {
     event.preventDefault();
     mutation.mutate({ username, useremail, userpassword });
 
@@ -61,19 +61,19 @@ const SignIn = () => {
 
   }
 
-  const handleLoginName = (event: MouseEvent<HTMLDivElement>) => {
+  const handleLoginName = (event: MouseEvent) => {
     /*mutation.mutate({ username });*/
 
     setUsername(event.target.value);
   };
 
-  const handleLoginEmail = (event: MouseEvent<HTMLDivElement>) => {
+  const handleLoginEmail = (event: MouseEvent) => {
     /*mutation.mutate({ username });*/
 
     setUserEmail(event.target.value);
   };
 
-  const handleLoginPassword = (event: MouseEvent<HTMLDivElement>) => {
+  const handleLoginPassword = (event: MouseEvent) => {
     /*mutation.mutate({ username });*/
 
     setUserPassword(event.target.value);
