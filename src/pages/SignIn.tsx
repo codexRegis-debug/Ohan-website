@@ -1,9 +1,9 @@
 /**/
 import { MouseEvent, useState } from 'react';
 import { useMutation } from '@tanstack/react-query';
-import { GlowingHeader } from '../components/Headers.tsx'
-import { Footer, ExtraFooter } from '../components/Footer.tsx'
-import { Form } from '../components/Form.tsx'
+import { GlowingHeader } from '@/components/Headers.tsx'
+import { Footer, ExtraFooter } from '@/components/Footer.tsx'
+import { Form } from '@/components/Form.tsx'
 import './LoginPage.tsx';
 
 type SignInUser = {
@@ -120,9 +120,7 @@ const SignIn = () => {
       />
       <br/>
       <br/>
-      <ExtraFooter
-        loadText='Loading page'
-      />
+      <ExtraFooter/>
     </>
   )
 };

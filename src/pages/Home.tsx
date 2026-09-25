@@ -5,15 +5,15 @@
 *   useRef,
 * } from 'react';
 */
+import { NavLink } from 'react-router-dom';
 import { FaYoutube, FaInstagram } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
-import { NavLink } from 'react-router-dom';
-import NewAnime from '../animeanimations/NewAnime.jsx';
-import AnimeRotate from '../animeanimations/AnimeRotate.jsx';
-import AnimeGrid from '../animeanimations/AnimeGrid.jsx';
-import './Home.css';
 import { XCircle } from 'lucide-react';
-import Effect from '../animeanimations/Effect.jsx';
+import NewAnime from '@/animeanimations/NewAnime.jsx';
+import AnimeRotate from '@/animeanimations/AnimeRotate.jsx';
+import AnimeGrid from '@/animeanimations/AnimeGrid.jsx';
+import Effect from '@/animeanimations/Effect.jsx';
+import './Home.css';
 
 const listItems = [
   {

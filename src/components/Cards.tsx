@@ -1,6 +1,7 @@
 /**/
 import { ArrowRight } from 'lucide-react';
 import { MouseEvent } from 'react'
+import { useHover } from '@/hooks/useHover.tsx'
 
 export const Card = ({
   text,
@@ -10,8 +11,15 @@ export const Card = ({
   onClick: (e: MouseEvent<HTMLDivElement>) => void ,
 }) => {
 
+  const hoverAction = useHover()
   return (
-    <div style={{ display: 'flex', alignItems: 'center', width: '100%'}}>
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        width: '100%'
+      }}
+    >
       <div
         onClick={ onClick }
         style={
@@ -27,14 +35,25 @@ export const Card = ({
             flexGrow: '0',
             cursor: 'pointer',
             textAlign: 'center',
-            color: 'white',
+            color: "white",
             fontWeight: 'bold',
           }
         }
       >
-        <h1 style={{ marginTop: '18px', }}>
-          { text }
-        </h1>
+        {
+          !hoverAction
+          ? (
+              <h1 style={{ color: "grey", marginTop: '18px', }}>
+                { text }
+              </h1>
+            )
+          : (
+              <h1 style={{ marginTop: '18px', }}>
+                { text }
+              </h1>
+            )
+        }
+
         <span >
           <ArrowRight
             size={ 20 }

@@ -1,6 +1,5 @@
 /**/
-
-import { MouseEvent } from 'react'
+import { ChangeEvent } from 'react'
 
 export const Input = ({
   name,
@@ -9,7 +8,7 @@ export const Input = ({
 } : {
   name: string,
   value: string,
-  onChange: (event: MouseEvent) => void,
+  onChange: (event: ChangeEvent) => void,
 }) => {
 
   return (

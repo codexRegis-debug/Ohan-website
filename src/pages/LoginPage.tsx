@@ -1,10 +1,10 @@
 /* Login Page */
-import { Card } from '../components/Cards.tsx';
 import { MouseEvent, useState } from 'react';
 import { useMutation } from '@tanstack/react-query';
-import { GlowingHeader, Header } from '../components/Headers.tsx';
-import { Input } from '../components/Input.tsx'
-import { Footer } from '../components/Footer.tsx'
+import { GlowingHeader, Header } from '@/components/Headers.tsx';
+import { Input } from '@/components/Input.tsx'
+import { Footer, ExtraFooter } from '@/components/Footer.tsx'
+import { Card } from '@/components/Cards.tsx';
 
 type LoginOrSignIn = {
   userName?: string
@@ -106,6 +106,8 @@ const LoginPage = () => {
         link='/sign-in'
         linkText='Sign In here'
       />
+      <br/>
+      <ExtraFooter/>
     </>
   )
 }

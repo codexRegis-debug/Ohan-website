@@ -33,16 +33,12 @@ export const ExtraFooter = () => {
   return (
     <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
       {isOnline
-        ?(
-          <h1>
-            {"  "}
-          </h1>
-        )
-        :(
-          <h3 style={{ color: "red" }}>
-            Internet connection lost
-          </h3>
-        )
+        ? null
+        : (
+            <h3 style={{ color: "red", fontSize: '15px', fontStyle: 'italic' }}>
+              Internet connection lost
+            </h3>
+          )
       }
     </div>
   )

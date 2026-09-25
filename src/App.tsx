@@ -9,7 +9,6 @@ import ContactUs from './pages/ContactUs.jsx';
 import AboutUs from './pages/AboutUs.jsx';
 import SignIn from './pages/SignIn.jsx';
 import LoginPage from './pages/LoginPage.tsx';
-import LoadingPage from './pages/LoadingPage.tsx';
 
 const App = () => {
   const [clicked, isClicked] = useState<boolean>(false)
