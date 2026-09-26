@@ -47,7 +47,6 @@ export const GlowingHeader = ({
             <h3 style={{ color: 'grey' }}>{ headerThreeAgain }</h3>
           </div>
         </div>
-        {/* Comment */}
       </div>
     </>
   )

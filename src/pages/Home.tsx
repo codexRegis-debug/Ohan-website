@@ -105,7 +105,6 @@ const Home = () => {
             style={{ color: 'white' }}
           />
         </Effect>
-
         <Effect>
           <AnimeRotate
             className='box'
@@ -158,7 +157,6 @@ const Home = () => {
           <p> offer, learn how to post it organically, get </p>
           <p> paid commission on every conversion </p>
         </div>
-
         <div style={{textAlign:'left', paddingTop:'300px', color:'white' }}>
           <Effect>
             <NewAnime
@@ -384,7 +382,7 @@ const Home = () => {
           >
             <Effect>
               <AnimeGrid
-                text={'Is it actually free '}
+                text={'Is it actually free?'}
               />
             </Effect>
             <br/>
@@ -440,7 +438,6 @@ const Home = () => {
                 <p>Your first affiliate </p>
                 <p>commission is one</p>
                 <p className='purple-text'>signup away</p>
-
               </div>
             </Effect>
             <Effect>

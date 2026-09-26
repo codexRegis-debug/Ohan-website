@@ -8,6 +8,7 @@ export const useHover = () => {
 
     setIsHovered(onmouseover ? !isHovered : false)
   }
+  
   const newProps = {
     isHovered,
     handleHover,
