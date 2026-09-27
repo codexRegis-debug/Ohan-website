@@ -196,7 +196,6 @@ const Home = () => {
               <div
                 className='border-box'
                 style={{ color: 'white', justifyItems: 'center', alignItems: 'center',  backgroundColor: '#121212', borderRadius: '15px', marginTop: '30px', width: '500px', height: '100px' }}
-
               >
                 <XCircle style={{ margin: '15px' }} size={26} color={'red'}/>
                 <h3 style={{ textAlign:'center', marginTop: '-45px', marginLeft: '25px',  }}>Posting your own content and getting 200 views</h3>

@@ -1,8 +1,15 @@
+/**/
 import { useEffect } from 'react';
 import { animate } from 'animejs';
 import './AnimeGrid.css';
 
-const AnimeGrid = ({ text, message }) => {
+const AnimeGrid = ({
+  text,
+  message,
+} : {
+  text: string,
+  message: string,
+}) => {
 
   useEffect(() => {
     animate('.animegrid', {
@@ -29,7 +36,7 @@ const AnimeGrid = ({ text, message }) => {
           borderRadius: '20px',
           justifyItems: 'center',
           alignItems: 'center',
-
+          cursor: 'pointer',
         }}
       >
         <div
@@ -46,13 +53,13 @@ const AnimeGrid = ({ text, message }) => {
         >
           { text }
         </h1>
-
         <h2
           style={{
             color: 'grey',
             fontSize: '15px',
             margin: '3px',
-            marginLeft: '80px'
+            marginLeft: '80px',
+            display: 'flex',
           }}
         >
           { message }

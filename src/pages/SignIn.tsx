@@ -87,7 +87,7 @@ const SignIn = () => {
         headerOneAgain=' 150K '
         headerThreeAgain=' Active members '
       />
-      <div style={{ display: '', alignItems: 'center', width: '100%'  }}>
+      <div style={{ alignItems: 'center', width: '100%'  }}>
         <div style={{
           left: '30px',
           color: 'white',
