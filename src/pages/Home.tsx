@@ -348,7 +348,7 @@ const Home = () => {
                 alignItems: 'center',
                 textAlign: 'center',
                 paddingTop: '8px',
-                marginTop: '300px',
+                marginTop: '30%',
                 width: '180px',
                 height: '30px',
                 borderRadius: '50px',
