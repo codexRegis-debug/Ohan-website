@@ -126,7 +126,7 @@ const Home = () => {
             className='box-4'
             line={textItems[3].line}
             words={textItems[3].words}
-            style={{ color: '' }}
+            style={{ color: 'green' }}
           />
         </Effect>
         </div>

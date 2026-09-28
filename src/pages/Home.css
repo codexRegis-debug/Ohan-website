@@ -22,6 +22,10 @@
   transition: transform 0.1s ease;
 }
 
+.bow-4 {
+  color: blue;
+}
+
 .heading-color {
   background: linear-gradient(90deg, white 10%, #7e22ce 90%);
 
