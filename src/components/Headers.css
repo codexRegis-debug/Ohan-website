@@ -16,3 +16,11 @@
   transform: translateY(2px);
   box-shadow: 0 2px 6px rgba(230, 0, 0, 0.3);
 }
+
+.text-one {
+  margin-top: -10%;
+}
+
+.text-two {
+  margin-top: -10%;
+}

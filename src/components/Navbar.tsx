@@ -4,7 +4,7 @@ import './Navbar.css';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { ImCross } from 'react-icons/im';
 
-const Navbar = ({ clicked, isClicked }) => {
+const Navbar = ({ clicked, isClicked } : { clicked: boolean, isClicked: (clicked: boolean) => boolean }) => {
   const handleClicked = () => {
     isClicked(!clicked);
     console.log('clicked');

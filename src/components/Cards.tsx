@@ -56,6 +56,7 @@ export const Card = ({
 
         <span >
           <ArrowRight
+            style={{ marginTop: '-10%' }}
             size={ 20 }
           />
         </span>
