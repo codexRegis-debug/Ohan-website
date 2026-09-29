@@ -11,3 +11,16 @@ html, body{
   overflow-x: hidden;
   width: 100%;
 }
+
+@media screen and (max-width: 480px) {
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.5rem; }
+  p, label, input { font-size: 0.95rem; }
+
+  form input,
+  form textarea,
+  form select {
+    padding: 8px 10px;
+    margin-bottom: 8px 
+  }
+}

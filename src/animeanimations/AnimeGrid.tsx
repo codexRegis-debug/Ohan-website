@@ -25,8 +25,8 @@ const AnimeGrid = ({
       <div
         className='animegrid'
         style={{
-          marginTop: '40px',
-          marginLeft: '20px',
+          marginTop: '10%',
+          marginLeft: '5%',
           margin: 'auto',
           width: '90%',
           height: '80px',
@@ -57,7 +57,7 @@ const AnimeGrid = ({
           style={{
             color: 'grey',
             fontSize: '15px',
-            margin: '3px',
+            margin: '2px',
             marginLeft: '80px',
             display: 'flex',
           }}

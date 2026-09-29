@@ -24,7 +24,7 @@ export const Card = ({
         onClick={ onClick }
         style={
           {
-            width: '190px',
+            maxWidth: '190px',
             fontSize: '10px',
             height: '70px',
             marginTop: '24px',

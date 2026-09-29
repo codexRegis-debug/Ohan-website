@@ -3,9 +3,13 @@
     "composite": true,
     "skipLibCheck": true,
     "module": "ESNext",
-    "moduleResolution": "bundler",
+    "target": "ESNext",
+    "moduleResolution": "Bundler",
     "allowSyntheticDefaultImports": true,
-    "types": ["node"]
+    "types": ["node"],
+    "paths":{
+      "@/*":["./src/*"]
+    }
   },
   "include": ["vite.config.ts"]
 }
