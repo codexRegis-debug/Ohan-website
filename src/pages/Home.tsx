@@ -59,7 +59,7 @@ const Home = () => {
         className='header'
         style={{ margin: 'auto', marginTop: '20px', paddingTop: '5px', alignItems: 'center', fontWeight: '100px', justifyItems: 'center', textAlign:'center', color:'white', fontSize:'9px', width: '300px', height: '30px', backgroundColor: 'gray', borderRadius: '20px'}}
         >
-          <h1 style={{ marginTop: '-2%' }}> Watch - Join - Get paid </h1>
+          <h1 style={{ marginTop: '-1%' }}> Watch - Join - Get paid </h1>
       </div>
           <br/>
       <div className='topText' style={{marginTop:'30px', textAlign:'center', color:'white', fontSize:'24px'}}>
@@ -80,6 +80,7 @@ const Home = () => {
           <NavLink className="SignUpLink" to="/sign-in">
             <div
               className='white-glow'
+              style={{ color: 'blue' }}
             >
               {'Sign up For Free ->'}
             </div>
