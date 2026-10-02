@@ -13,7 +13,7 @@ export const Input = ({
 
   return (
     <>
-      <div style={{ marginTop: '40px', marginLeft: '30px', maxWidth: '300px', color: 'white' }}>
+      <div style={{ marginTop: '3rem', marginLeft: '30px', maxWidth: '300px', color: 'white' }}>
         <br/>
         { name }
       </div>
@@ -21,9 +21,10 @@ export const Input = ({
         <div
           style={
             {
+              maxWidth: '200px',
               width: '80%',
               height: '70px',
-              marginTop: '22px',
+              marginTop: '3rem',
               borderRadius: '10px',
               display: 'flex',
               textAlign: 'left',
@@ -32,7 +33,17 @@ export const Input = ({
           }
         >
           <input
-            style={{ padding: '20px 150px', borderRadius: '20px', border: 'none', backgroundColor: '#121212', textAlign: 'left', fontSize: '15px', fontWeight: 'bold', color: 'white' }}
+            style={{
+              padding: '2rem 20rem',
+              maxWidth: '80%',
+              borderRadius: '20px',
+              border: 'none',
+              backgroundColor: '#121212',
+              textAlign: 'left',
+              fontSize: '15px',
+              fontWeight: 'bold',
+              color: 'white',
+            }}
             value={ value }
             onChange={ onChange }
           />

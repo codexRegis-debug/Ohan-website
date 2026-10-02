@@ -5,6 +5,7 @@ import { GlowingHeader, Header } from '@/components/Headers.tsx';
 import { Input } from '@/components/Input.tsx'
 import { Footer, ExtraFooter } from '@/components/Footer.tsx'
 import { Card } from '@/components/Cards.tsx';
+import { MyChakra } from '@/components/MyChakra.tsx'
 
 type LoginOrSignIn = {
   userName?: string
@@ -108,6 +109,11 @@ const LoginPage = () => {
       />
       <br/>
       <ExtraFooter/>
+      <br/>
+      <br/>
+      <MyChakra
+        children={"Login"}
+      />
     </>
   )
 }

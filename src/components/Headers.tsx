@@ -32,19 +32,20 @@ export const GlowingHeader = ({
           style={{
             backgroundColor: '#271B3D',
             marginTop: '0.7rem',
-            width: '500px',
+            maxWidth: '500px',
+            width: '70%',
             height: '80px',
             borderRadius: '14px',
             padding: '0.5rem 1rem',
           }}
         >
           <div className='text-one'>
-            <h1 style={{ color: 'white' }}> { headerOne }</h1>
-            <h3 style={{ color: 'grey', marginTop: '-10%' }}>{ headerThree }</h3>
+            <h1 style={{ color: 'white', marginTop: '9%' }}> { headerOne }</h1>
+            <h3 style={{ color: 'grey', marginTop: '5%' }}>{ headerThree }</h3>
           </div>
           <div className='text-two'>
-            <h1 style={{ color: 'white' }}>{ headerOneAgain }</h1>
-            <h3 style={{ color: 'grey', marginTop: '-10%' }}>{ headerThreeAgain }</h3>
+            <h1 style={{ color: 'white', marginTop: '9%' }}>{ headerOneAgain }</h1>
+            <h3 style={{ color: 'grey', marginTop: '5%' }}>{ headerThreeAgain }</h3>
           </div>
         </div>
       </div>

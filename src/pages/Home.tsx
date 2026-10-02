@@ -8,7 +8,7 @@
 import { NavLink } from 'react-router-dom';
 import { FaYoutube, FaInstagram } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
-import { XCircle } from 'lucide-react';
+import { XCircle, ArrowRight } from 'lucide-react';
 import NewAnime from '@/animeanimations/NewAnime.jsx';
 import AnimeRotate from '@/animeanimations/AnimeRotate.jsx';
 import AnimeGrid from '@/animeanimations/AnimeGrid.jsx';
@@ -57,9 +57,9 @@ const Home = () => {
     <>
       <div
         className='header'
-        style={{ margin: 'auto', marginTop: '20px', paddingTop: '5px', alignItems: 'center', fontWeight: '100px', justifyItems: 'center', textAlign:'center', color:'white', fontSize:'9px', width: '300px', height: '30px', backgroundColor: 'gray', borderRadius: '20px'}}
+        style={{ margin: 'auto', marginTop: '1.5rem', paddingTop: '5px', alignItems: 'center', fontWeight: '100px', justifyItems: 'center', textAlign:'center', color:'white', fontSize:'9px', width: '300px', height: '30px', backgroundColor: 'gray', borderRadius: '20px'}}
         >
-          <h1 style={{ marginTop: '-1%' }}> Watch - Join - Get paid </h1>
+          <h1 style={{ marginTop: '-1%', fontSize: '0.9rem' }}> Watch - Join - Get paid </h1>
       </div>
           <br/>
       <div className='topText' style={{marginTop:'30px', textAlign:'center', color:'white', fontSize:'24px'}}>
@@ -80,10 +80,16 @@ const Home = () => {
           <NavLink className="SignUpLink" to="/sign-in">
             <div
               className='white-glow'
-              style={{ color: 'blue' }}
+              style={{ color: 'black' }}
             >
-              {'Sign up For Free ->'}
+              {'Sign up For Free '}
+              <span>
+                <ArrowRight
+                  size={20}
+                />
+              </span>
             </div>
+
           </NavLink>
         </div>
       </Effect>

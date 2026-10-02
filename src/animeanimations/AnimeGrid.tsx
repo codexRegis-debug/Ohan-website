@@ -45,10 +45,10 @@ const AnimeGrid = ({
         </div>
         <h1
           style={{
-            fontSize: '25px',
+            fontSize: '100%',
             alignItems: 'center',
-            marginLeft: '60px',
-            left: '32px',
+            marginLeft: '3rem',
+            left: '5rem',
           }}
         >
           { text }
@@ -56,8 +56,8 @@ const AnimeGrid = ({
         <h2
           style={{
             color: 'grey',
-            fontSize: '15px',
-            margin: '2px',
+            fontSize: '100%',
+            margin: '0.1rem',
             marginLeft: '80px',
             display: 'flex',
           }}
