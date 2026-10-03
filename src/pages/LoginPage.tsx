@@ -4,8 +4,8 @@ import { useMutation } from '@tanstack/react-query';
 import { GlowingHeader, Header } from '@/components/Headers.tsx';
 import { Input } from '@/components/Input.tsx'
 import { Footer, ExtraFooter } from '@/components/Footer.tsx'
-import { Card } from '@/components/Cards.tsx';
 import { MyChakra } from '@/components/MyChakra.tsx'
+import { MainBody } from '@/components/MainBody.tsx'
 
 type LoginOrSignIn = {
   userName?: string
@@ -76,44 +76,46 @@ const LoginPage = () => {
 
   return (
     <>
-      <GlowingHeader
-        headerOne='$100M'
-        headerThree=' Paid to members'
-        headerOneAgain=' 150K '
-        headerThreeAgain=' Active members '
-      />
-      <br/>
-      <Header
-        children={'Welcome Back!'}
-      />
-      <Input
-        name={'Email Address '}
-        value={ userEmail }
-        onChange={ handleLoginEmail }
-      />
-      <Input
-        name={'Password '}
-        value={ userPassword }
-        onChange={ handleLoginPassword }
-      />
-      <Card
-        text={ 'Login ' }
-        onClick={ handleLogin }
-      />
-      <br/>
-      <br/>
-      <Footer
-        span="Don't have an account yet?"
-        link='/sign-in'
-        linkText='Sign In here'
-      />
-      <br/>
-      <ExtraFooter/>
-      <br/>
-      <br/>
-      <MyChakra
-        children={"Login"}
-      />
+      <MainBody>
+        <GlowingHeader
+          headerOne='$100M'
+          headerThree=' Paid to members'
+          headerOneAgain=' 150K '
+          headerThreeAgain=' Active members '
+        />
+        <br/>
+        <Header
+          children={'Welcome Back!'}
+        />
+        <Input
+          name={'Email Address '}
+          value={ userEmail }
+          onChange={ handleLoginEmail }
+        />
+        <Input
+          name={'Password '}
+          value={ userPassword }
+          onChange={ handleLoginPassword }
+        />
+        <br/>
+        <MyChakra
+          children='Login '
+          onClick={ handleLogin }
+        />
+        <br/>
+        <br/>
+        <Footer
+          span="Don't have an account yet?"
+          link='/sign-in'
+          linkText='Sign In here'
+        />
+        <br/>
+        <ExtraFooter/>
+        <br/>
+        <br/>
+
+      </MainBody>
+
     </>
   )
 }

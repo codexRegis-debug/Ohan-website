@@ -5,6 +5,8 @@ import { GlowingHeader } from '@/components/Headers.tsx'
 import { Footer, ExtraFooter } from '@/components/Footer.tsx'
 import { Form } from '@/components/Form.tsx'
 import './LoginPage.tsx';
+import { TextField } from '@/components/MyChakra.tsx'
+import { MainBody } from '@/components/MainBody.tsx'
 
 type SignInUser = {
   username: string
@@ -81,46 +83,53 @@ const SignIn = () => {
 
   return (
     <>
-      <GlowingHeader
-        headerOne='$100M'
-        headerThree=' Paid to members'
-        headerOneAgain=' 150K '
-        headerThreeAgain=' Active members '
-      />
-      <div style={{ alignItems: 'center', width: '100%'  }}>
-        <div style={{
-          left: '30px',
-          color: 'white',
-          marginTop: '30px',
-          marginLeft: '20px',
-          fontSize: '40px',
-          fontWeight: 'bold',
-         }}
-        >
-          {'Join Today'}
-          <h2 style={{ fontSize: '18px', color: 'grey' }}> Create your account and start earning</h2>
+      <MainBody>
+        <GlowingHeader
+          headerOne='$100M'
+          headerThree=' Paid to members'
+          headerOneAgain=' 150K '
+          headerThreeAgain=' Active members '
+        />
+        <div style={{ alignItems: 'center', width: '100%'  }}>
+          <div style={{
+            left: '30px',
+            color: 'white',
+            marginTop: '30px',
+            marginLeft: '20px',
+            fontSize: '40px',
+            fontWeight: 'bold',
+           }}
+          >
+            {'Join Today'}
+            <h2 style={{ fontSize: '18px', color: 'grey' }}> Create your account and start earning</h2>
+          </div>
         </div>
-      </div>
 
-      <Form
-        onLogin={ handleLogin }
-        name={ username }
-        password={ userpassword }
-        email={ useremail }
-        onLoginName={ handleLoginName }
-        onLoginEmail={ handleLoginEmail }
-        onLoginPassword={ handleLoginPassword }
-      />
-      <br/>
-      <br/>
-      <Footer
-        span='Already Have an Account?'
-        link='/log-in'
-        linkText='Login Here'
-      />
-      <br/>
-      <br/>
-      <ExtraFooter/>
+        <Form
+          onLogin={ handleLogin }
+          name={ username }
+          password={ userpassword }
+          email={ useremail }
+          onLoginName={ handleLoginName }
+          onLoginEmail={ handleLoginEmail }
+          onLoginPassword={ handleLoginPassword }
+        />
+        <br/>
+        <br/>
+        <Footer
+          span='Already Have an Account?'
+          link='/log-in'
+          linkText='Login Here'
+        />
+        <br/>
+        <br/>
+        <ExtraFooter/>
+        <br/>
+        <br/>
+        <TextField
+          children="Posting your own content and getting 200 views"
+        />
+      </MainBody>
     </>
   )
 };

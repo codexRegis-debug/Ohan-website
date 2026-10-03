@@ -1,7 +1,7 @@
 /**/
 import { Input } from './Input.tsx'
-import { Card } from './Cards.tsx'
 import { MouseEvent } from 'react'
+import { MyChakra } from '@/components/MyChakra.tsx'
 
 export const Form = ({
   name,
@@ -39,8 +39,9 @@ export const Form = ({
           value={ email }
           onChange={ onLoginEmail }
         />
-        <Card
-          text={ 'Continue' }
+        <br/>
+        <MyChakra
+          children={ 'Continue' }
           onClick={ onLogin }
         />
       </form>
