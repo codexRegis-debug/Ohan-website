@@ -2,6 +2,7 @@
 import { Input } from './Input.tsx'
 import { MouseEvent } from 'react'
 import { MyChakra } from '@/components/MyChakra.tsx'
+import { chakra } from '@chakra-ui/react'
 
 export const Form = ({
   name,
@@ -23,7 +24,7 @@ export const Form = ({
 
   return (
     <>
-      <form >
+      <chakra.form >
         <Input
           name={'USERNAME'}
           value={ name }
@@ -44,7 +45,7 @@ export const Form = ({
           children={ 'Continue' }
           onClick={ onLogin }
         />
-      </form>
+      </chakra.form>
     </>
   )
 }

@@ -1,5 +1,6 @@
 /**/
 import { ChangeEvent } from 'react'
+import { chakra } from '@chakra-ui/react'
 
 export const Input = ({
   name,
@@ -14,7 +15,6 @@ export const Input = ({
   return (
     <>
       <div style={{ marginTop: '3rem', marginLeft: '30px', maxWidth: '300px', color: 'white' }}>
-        <br/>
         { name }
       </div>
       <div style={{ display: 'flex', alignItems: 'center', width: '100%'}}>
@@ -32,7 +32,7 @@ export const Input = ({
             }
           }
         >
-          <input
+          <chakra.input
             style={{
               padding: '2rem 20rem',
               maxWidth: '80%',
