@@ -8,6 +8,7 @@ export const MainBody = ({ children } : { children: ReactNode }) => {
       w="100%"
       h="100%"
       bg="black.400"
+      overflow="hidden"
     >
       { children }
     </Box>
