@@ -47,12 +47,13 @@ export const TextField = ({ children } : { children: string }) => {
       <Box
         flex="-2"
         w="28rem"
+        h="4rem"
         bg="gray.900"
         py="9"
-        px="5"
+        px="4"
         rounded="xl"
         shadow="sm"
-        p={{ base: "2", md: "4"}}
+        p={{ base: "2", md: "2"}}
         maxW="container.lg"
       >
         <Text
@@ -64,9 +65,9 @@ export const TextField = ({ children } : { children: string }) => {
         </Text>
         <span>
           <XCircle
-            size={25}
+            size={20}
             color={'red'}
-            style={{ marginTop: "-5%", marginRight: "2p" }}
+            style={{ marginTop: "-5%", marginLeft: "-1.99%" }}
           />
         </span>
       </Box>
