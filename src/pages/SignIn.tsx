@@ -5,7 +5,6 @@ import { GlowingHeader } from '@/components/Headers.tsx'
 import { Footer, ExtraFooter } from '@/components/Footer.tsx'
 import { Form } from '@/components/Form.tsx'
 import './LoginPage.tsx';
-import { TextField } from '@/components/MyChakra.tsx'
 import { MainBody } from '@/components/MainBody.tsx'
 
 type SignInUser = {
@@ -30,7 +29,7 @@ const signInUser = async (credentials: SignInUser) => {
   });
 
   const errorData = await response.json();
-  console.log('FULL ERROR', JSON.stringify(errorData, null, 2));
+  console.log('FULL ERROR:', JSON.stringify(errorData, null, 2));
 
   if (!response.ok) {
     throw new Error('Sign In failed')
@@ -125,10 +124,6 @@ const SignIn = () => {
         <br/>
         <ExtraFooter/>
         <br/>
-        <br/>
-        <TextField
-          children="Posting your own content and getting 200 views"
-        />
       </MainBody>
     </>
   )

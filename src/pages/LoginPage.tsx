@@ -67,10 +67,14 @@ const LoginPage = () => {
   }
 
   const handleLoginEmail = (e: MouseEvent) => {
+    e.preventDefault()
+
     setUserEmail(e.target.value);
   }
 
   const handleLoginPassword = (e: MouseEvent) => {
+    e.preventDefault()
+
     setUserPassword(e.target.value);
   };
 

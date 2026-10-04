@@ -24,8 +24,8 @@ export const Input = ({
               maxWidth: '200px',
               width: '80%',
               height: '70px',
-              marginTop: '3rem',
-              borderRadius: '10px',
+              marginTop: '2rem',
+              borderRadius: '1px',
               display: 'flex',
               textAlign: 'left',
               flexGrow: '0',
@@ -33,19 +33,15 @@ export const Input = ({
           }
         >
           <chakra.input
-            w={{ base: "100%", md: "80%", lg: "500px" }}
-            px={{ base: 4, md: 7 }}
-            py={{ base: 2, md: 3 }}
-            _focus={{
-              borderColor: "white.500",
-              boxShadow: "0 0 0 1px var(--chakra-colors-blue-500)"
-            }}
+            w={{ base: "100%", md: "80%", lg: "1000px" }}
+            px={{ base: 4, md: 8 }}
+            py={{ base: 3, md: 5 }}
+
             style={{
-              padding: '1rem 10rem',
               borderRadius: '20px',
               border: 'none',
               backgroundColor: '#121212',
-              textAlign: 'left',
+              textAlign: 'center',
               fontSize: '15px',
               fontWeight: 'bold',
               color: 'white',
