@@ -1,6 +1,6 @@
 /**/
 import { chakra, Box, Text } from '@chakra-ui/react'
-import { ArrowRight, XCircle } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { MouseEvent } from 'react'
 
 export const MyChakra = ({
@@ -63,13 +63,6 @@ export const TextField = ({ children } : { children: string }) => {
         >
           { children }
         </Text>
-        <span>
-          <XCircle
-            size={20}
-            color={'red'}
-            style={{ marginTop: "-5%", marginLeft: "-1.99%" }}
-          />
-        </span>
       </Box>
     </div>
   )

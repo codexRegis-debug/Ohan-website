@@ -1,6 +1,6 @@
 /**/
-import NewAnime from '../animeanimations/NewAnime.jsx';
-import Effect from '../animeanimations/Effect.jsx'
+import NewAnime from '@/components/NewAnime.tsx';
+import Effect from '@/animeanimations/Effect.jsx'
 
 const ContactUs = () => {
 

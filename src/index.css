@@ -1,7 +1,6 @@
 *, *::before, *::after{
   font-family: sans-serif;
   box-sizing: border-box;
-
 }
 
 html, body{
@@ -12,15 +11,15 @@ html, body{
   width: 100%;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 580px) {
   h1 { font-size: 1.9rem; }
   h2 { font-size: 1.7rem; }
-  p, label, input { font-size: 0.99rem; }
+  p, label, input { font-size: 1rem; }
 
   form input,
   form textarea,
   form select {
-    padding: 8px 10px;
+    padding: 9px 10px;
     margin-bottom: 8px
   }
 }

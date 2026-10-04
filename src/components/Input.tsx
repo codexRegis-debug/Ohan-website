@@ -33,9 +33,15 @@ export const Input = ({
           }
         >
           <chakra.input
+            w={{ base: "100%", md: "80%", lg: "500px" }}
+            px={{ base: 4, md: 7 }}
+            py={{ base: 2, md: 3 }}
+            _focus={{
+              borderColor: "white.500",
+              boxShadow: "0 0 0 1px var(--chakra-colors-blue-500)"
+            }}
             style={{
-              padding: '2rem 20rem',
-              maxWidth: '80%',
+              padding: '1rem 10rem',
               borderRadius: '20px',
               border: 'none',
               backgroundColor: '#121212',

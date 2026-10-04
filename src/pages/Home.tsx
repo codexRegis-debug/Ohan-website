@@ -8,8 +8,8 @@
 import { NavLink } from 'react-router-dom';
 import { FaYoutube, FaInstagram } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
-import { XCircle, ArrowRight } from 'lucide-react';
-import NewAnime from '@/animeanimations/NewAnime.jsx';
+import { ArrowRight } from 'lucide-react';
+import NewAnime from '@/components/NewAnime.tsx';
 import AnimeRotate from '@/animeanimations/AnimeRotate.jsx';
 import AnimeGrid from '@/animeanimations/AnimeGrid.jsx';
 import Effect from '@/animeanimations/Effect.jsx';
@@ -138,7 +138,7 @@ const Home = () => {
               style={{ color: 'green' }}
             />
           </Effect>
-          </div>
+        </div>
           <Effect>
             <div
               className='text-grid'
