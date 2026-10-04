@@ -104,7 +104,7 @@ const Home = () => {
         </div>
 
         <chakra.div
-          px={{ base: 5, md: 4, lg: "10%" }}
+          px={{ base: 5, md: 4, lg: "100%" }}
           className='box-container'
           style={{ backgroundColor: 'black' }}
         >
@@ -196,9 +196,9 @@ const Home = () => {
               style={{ justifyItems: 'center', textAlign: 'center', marginTop: '30px' }}
             >
               <Effect>
-                <h1 style={{  color: "white", fontWeight: '30px', fontSize: '42px' }}> Affiliate marketing on </h1>
-                <h1 className='diff-colour' style={{ fontWeight: '30px', fontSize: '42px' }}> your own isn't working </h1>
-                <h1 style={{  color: "white", fontWeight: '30px', fontSize: '42px' }}> - and you know it. </h1>
+                <h1 style={{  color: "white",  }}> Affiliate marketing on </h1>
+                <h1 className='diff-colour' > your own isn't working </h1>
+                <h1 style={{  color: "white", }}> - and you know it. </h1>
               </Effect>
             </div>
             <div style={{ fontWeight: '', marginTop: '30px', marginLeft: '15px' }}>
