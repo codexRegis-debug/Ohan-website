@@ -20,7 +20,7 @@ const NewAnime = ({ text, content } : { text: string, content: string }) => {
     >
       <chakra.div
         w={{ base: "90%", md: "70%", lg: "500px" }}
-
+        h={{ base: "100%" }}
         className='ball'
         style={{ alignItems:'center', borderRadius:'10px' }}
       >
