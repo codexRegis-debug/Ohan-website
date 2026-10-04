@@ -220,7 +220,7 @@ const Home = () => {
               </Effect>
               <br/>
               <Effect>
-                <div style={{ color: 'white', fontSize: '18px', alignItems: 'left', justifyItems: 'center', display: 'grid'  }}>
+                <div style={{ color: 'white', alignItems: 'left', justifyItems: 'center', display: 'grid'  }}>
                   <h2>This fixes the part everyone gets </h2>
                   <h2 className='second-text'>wrong: picking the right offer and</h2>
                   <h2 className='third-text'>knowing what to post.</h2>
