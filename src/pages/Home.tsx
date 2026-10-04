@@ -16,6 +16,7 @@ import Effect from '@/animeanimations/Effect.jsx';
 import './Home.css';
 import { MainBody } from '@/components/MainBody.tsx'
 import { TextField } from '@/components/MyChakra.tsx'
+import { chakra } from '@chakra-ui/react'
 
 const listItems = [
   {
@@ -102,7 +103,8 @@ const Home = () => {
           <p style={{ alignItems:'center', color: 'grey' }}>Free forever. No Startup Costs. Takes 60 seconds</p>
         </div>
 
-        <div
+        <chakra.div
+          px={{ base: 5, md: 4, lg: "10%" }}
           className='box-container'
           style={{ backgroundColor: 'black' }}
         >
@@ -138,7 +140,7 @@ const Home = () => {
               style={{ color: 'green' }}
             />
           </Effect>
-        </div>
+        </chakra.div>
           <Effect>
             <div
               className='text-grid'
