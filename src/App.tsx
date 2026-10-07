@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import  Navbar  from './components/Navbar.jsx';
 import Menu from './components/Menu.jsx'
-import { useState } from 'react';
+import { useState, Dispatch, SetStateAction } from 'react';
 import Home from './pages/Home.jsx';
 import ContactUs from './pages/ContactUs.jsx';
 import AboutUs from './pages/AboutUs.jsx';
@@ -11,7 +11,7 @@ import SignIn from './pages/SignIn.jsx';
 import LoginPage from './pages/LoginPage.tsx';
 
 const App = () => {
-  const [clicked, isClicked] = useState<boolean>(false)
+  const [clicked, isClicked] = useState<Dispatch<SetStateAction<boolean>>>(false)
   return (
     <>
       <Router>

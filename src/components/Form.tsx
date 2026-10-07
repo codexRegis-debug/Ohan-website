@@ -1,6 +1,6 @@
 /**/
 import { Input } from './Input.tsx'
-import { MouseEvent } from 'react'
+import { MouseEvent, ChangeEvent } from 'react'
 import { MyChakra } from '@/components/MyChakra.tsx'
 import { chakra } from '@chakra-ui/react'
 
@@ -17,9 +17,9 @@ export const Form = ({
   password: string,
   email: string,
   onLogin: (event: MouseEvent) => void,
-  onLoginName: (event: MouseEvent) => void,
-  onLoginEmail: (event: MouseEvent) => void,
-  onLoginPassword: (event: MouseEvent) => void,
+  onLoginName: (event: MouseEvent | ChangeEvent) => void,
+  onLoginEmail: (event: MouseEvent | ChangeEvent) => void,
+  onLoginPassword: (event: MouseEvent | ChangeEvent) => void,
 }) => {
 
   return (

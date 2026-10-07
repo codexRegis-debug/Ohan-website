@@ -104,7 +104,7 @@ const Home = () => {
         </div>
 
         <chakra.div
-          px={{ base: 5, md: 4, lg: "100%" }}
+          px={{ base: 5, md: 4, lg: "10%" }}
           className='box-container'
           style={{ backgroundColor: 'black' }}
         >

@@ -43,9 +43,9 @@ export const MyChakra = ({
 
 export const TextField = ({ children } : { children: string }) => {
   return (
-    <div style={{ alignItems: 'center', textAlign: "center", margin: "20px" }}>
+    <div style={{ display: 'flex', alignItems: 'center', textAlign: "center", margin: "20px" }}>
       <Box
-        flex="-2"
+        flex="-3"
         w="28rem"
         h="4rem"
         bg="gray.900"

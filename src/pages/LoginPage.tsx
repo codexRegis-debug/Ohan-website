@@ -119,7 +119,6 @@ const LoginPage = () => {
         <br/>
 
       </MainBody>
-
     </>
   )
 }

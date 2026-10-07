@@ -36,7 +36,6 @@ const signInUser = async (credentials: SignInUser) => {
   };
 
   return response.json()
-
 };
 
 const SignIn = () => {

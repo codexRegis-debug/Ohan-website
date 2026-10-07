@@ -33,9 +33,9 @@ export const Input = ({
           }
         >
           <chakra.input
-            w={{ base: "100%", md: "80%", lg: "1000px" }}
-            px={{ base: 4, md: 8 }}
-            py={{ base: 3, md: 5 }}
+            w={{ base: "100rem", md: "100%", lg: "1000px" }}
+            px={{ base: 10, md: 9 }}
+            py={{ base: 4, md: 5 }}
 
             style={{
               borderRadius: '20px',

@@ -1,5 +1,5 @@
 /**/
-import { Box, Flex, Heading, Text, VStack } from '@chakra-ui/react'
+import { Box, Text, } from '@chakra-ui/react'
 
 export const LongText = ({ children } : { children: string }) => {
   return (
