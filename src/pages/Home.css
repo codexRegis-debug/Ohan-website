@@ -117,7 +117,16 @@
 }
 
 .third-text {
-  background: linear-gradient(90deg, #7e22ce 20%, #7e22ce 80%);
+  background: linear-gradient(90deg, white 20%, #7e22ce 80%);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.fourth-text {
+  background: linear-gradient(90deg, white 20%, #7e22ce 80%);
 
   -webkit-background-clip: text;
   background-clip: text;

@@ -222,8 +222,9 @@ const Home = () => {
               <Effect>
                 <div style={{ color: 'white', alignItems: 'left', justifyItems: 'center', display: 'grid'  }}>
                   <h2>This fixes the part everyone gets </h2>
-                  <h2 className='second-text'>wrong: picking the right offer and</h2>
-                  <h2 className='third-text'>knowing what to post.</h2>
+                  <h2 className='second-text'>wrong: </h2>
+                  <h2 className='third-text'>picking the right offer and</h2>
+                  <h2 className='fourth-text'>knowing what to post.</h2>
                 </div>
               </Effect>
               <br/>
@@ -321,7 +322,7 @@ const Home = () => {
               style={{
                 display: 'grid',
                 width: '100vw',
-                height: '600px',
+                maxHeight: '1000px',
                 backgroundColor: '#121212',
                 marginTop: '40px',
                 justifyContent: 'center',
@@ -344,10 +345,10 @@ const Home = () => {
                   justifyContent: 'center',
                   alignItems: 'center',
                   textAlign: 'center',
-                  paddingTop: '8px',
+                  paddingTop: '0.1rem',
                   marginTop: '30%',
-                  width: '180px',
-                  height: '30px',
+                  width: '9rem',
+                  height: '2rem',
                   borderRadius: '50px',
                   backgroundColor: 'grey',
                   cursor: 'pointer',
@@ -419,17 +420,33 @@ const Home = () => {
                   justifyContent: 'center',
                   textAlign: 'center',
                   marginTop: '70px',
-                  display: 'grid'
+                  width: "100%",
+                  display: 'grid',
                 }
               }
             >
               <Effect>
-                <p style={{ borderRadius: '40px', width: '200px', height: '40px', backgroundColor: '#121212', color: 'grey', textAlign: 'center', fontSize: '18px', paddingTop: '10px', marginLeft: '100px' }}>Join 160,000+ creators</p>
+                <p
+                  style={{
+                    borderRadius: '40px',
+                    width: '200px',
+                    height: '40px',
+                    backgroundColor: '#121212',
+                    color: 'grey',
+                    textAlign: 'center',
+                    fontSize: '100%',
+                    paddingTop: '0.5rem',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    marginLeft: '5rem',
+                    marginRight: '5rem',
+                  }}
+                >Join 160,000+ creators</p>
               </Effect>
               <Effect>
                 <div style={{
                   marginTop: '40px',
-                  fontSize: '30px',
+                  fontSize: '100%',
                  }}>
                   <p>Your first affiliate </p>
                   <p>commission is one</p>

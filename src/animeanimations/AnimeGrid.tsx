@@ -8,7 +8,7 @@ const AnimeGrid = ({
   message,
 } : {
   text: string,
-  message: string,
+  message?: string,
 }) => {
 
   useEffect(() => {
@@ -37,18 +37,16 @@ const AnimeGrid = ({
           justifyItems: 'center',
           alignItems: 'center',
           cursor: 'pointer',
+          display: 'flex',
         }}
       >
-        <div
-          className='cicle'
-        >
-        </div>
+
         <h1
           style={{
             fontSize: '100%',
             alignItems: 'center',
-            marginLeft: '3rem',
-            left: '5rem',
+            display: 'flex',
+            justifyContent: 'center',
           }}
         >
           { text }
@@ -56,10 +54,10 @@ const AnimeGrid = ({
         <h2
           style={{
             color: 'grey',
-            fontSize: '100%',
-            margin: '0.1rem',
-            marginLeft: '80px',
+            fontSize: '80%',
+            margin: '0.5rem',
             display: 'flex',
+            justifyContent: 'center',
           }}
         >
           { message }
