@@ -6,7 +6,7 @@
 * } from 'react';
 */
 import { NavLink } from 'react-router-dom';
-import { FaYoutube, FaInstagram } from 'react-icons/fa';
+import { FaYoutube, FaInstagram, FaFacebook } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { ArrowRight } from 'lucide-react';
 import NewAnime from '@/components/NewAnime.tsx';
@@ -480,6 +480,9 @@ const Home = () => {
               </NavLink>
               <NavLink style={{ color: 'white', cursor: 'pointer' }} to=''>
                 <FaYoutube size={28}/>
+              </NavLink>
+              <NavLink style={{ color: 'white', cursor: 'pointer' }} to=''>
+                <FaFacebook size={28}/>
               </NavLink>
             </div>
             <div style={{ display: 'flex', marginTop: '100px', color: 'grey',  alignItems: 'center',gap: '16px', width: '100%'}}>
