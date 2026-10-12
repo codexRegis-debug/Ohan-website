@@ -75,7 +75,8 @@ const Home = () => {
         </div>
         <div style={{marginTop:'30px', textAlign:'center', fontSize:'24px'}}>
           <p style={{color: 'darkgrey'}}>Free training, real offers, a 160K+</p>
-          <p style={{color: 'darkgrey'}}>community.</p> <p style={{color:'white'}}> Watch the 5-min video below</p>
+          <p style={{color: 'darkgrey'}}>community.</p>
+          <p style={{color:'white'}}> Watch the 5-min video below</p>
           <p style={{color:'white'}}>- then join free today.</p>
         </div>
         <br/>
