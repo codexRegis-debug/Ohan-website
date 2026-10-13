@@ -20,7 +20,9 @@ const signInUser = async (credentials: SignInUser) => {
     'useremail': credentials.useremail,
   }
 
-  const response = await fetch('http://localhost:8000/api/signup', {
+  const backendURL = 'https://'
+
+  const response = await fetch('http://localhost:8000/api/signup' || backendURL, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
