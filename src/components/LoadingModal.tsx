@@ -1,20 +1,34 @@
 /**/
-/* import { motion } from 'framer-motion';  */
+import {
+  Dialog,
+  Spinner,
+  Text,
+  VStack,
+  Box,
+  Portal,
+} from '@chakra-ui/react'
+import { motion } from 'framer-motion';
 
-const LoadingModal = () => {
+const MotionBox = motion(Box)
+
+interface Props {
+  isOpen: boolean
+  message?: string
+}
+
+export const LoadingModal = ({isOpen, message = "Please wait..."}: Props) => {
   return (
     <>
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          width: '100%',
-        }}
+      <Dialog.Root
+        open={isOpen}
+        placement="center"
+        closeOnInteractOutside={false}
+        closeOnEscape={false}
       >
-        LoadingModal
-      </div>
+        <Portal>
+          
+        </Portal>
+      </Dialog.Root>
     </>
   )
 }
-
-export default LoadingModal

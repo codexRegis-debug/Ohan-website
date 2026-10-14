@@ -27,7 +27,7 @@ const signInUser = async (credentials: SignInUser) => {
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ formData }),
+    body: JSON.stringify(formData),
   });
 
   const errorData = await response.json();

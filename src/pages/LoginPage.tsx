@@ -8,9 +8,9 @@ import { MyChakra } from '@/components/MyChakra.tsx'
 import { MainBody } from '@/components/MainBody.tsx'
 
 type LoginOrSignIn = {
-  userName?: string
-  userEmail: string
-  userPassword: string
+  username?: string
+  useremail: string
+  userpassword: string
 }
 
 const enum LoginUser  {
@@ -21,8 +21,8 @@ const enum LoginUser  {
 
 const loginUsers = async (credentials: LoginOrSignIn) => {
   const formLoginData = {
-    'userEmail': credentials.userEmail,
-    'userPassword': credentials.userPassword,
+    'useremail': credentials.useremail,
+    'userpassword': credentials.userpassword,
   }
 
   const responseData = await fetch('http://localhost:8000/api/login', {
@@ -30,7 +30,7 @@ const loginUsers = async (credentials: LoginOrSignIn) => {
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ formLoginData })
+    body: JSON.stringify(formLoginData)
   })
 
   const errorData = await responseData.json();
@@ -47,8 +47,8 @@ const loginUsers = async (credentials: LoginOrSignIn) => {
 }
 
 const LoginPage = () => {
-  const [userEmail, setUserEmail] = useState<string>(LoginUser.Email)
-  const [userPassword, setUserPassword] = useState<string>(LoginUser.Password)
+  const [useremail, setUserEmail] = useState<string>(LoginUser.Email)
+  const [userpassword, setUserPassword] = useState<string>(LoginUser.Password)
 
   const mutation = useMutation({
     mutationFn: loginUsers,
@@ -60,7 +60,7 @@ const LoginPage = () => {
 
   const handleLogin = (e: MouseEvent) => {
     e.preventDefault()
-    mutation.mutate({ userEmail, userPassword })
+    mutation.mutate({ useremail, userpassword })
 
     setUserEmail(e.target.value)
     setUserPassword(e.target.value)
@@ -93,12 +93,12 @@ const LoginPage = () => {
         />
         <Input
           name={'Email Address '}
-          value={ userEmail }
+          value={ useremail }
           onChange={ handleLoginEmail }
         />
         <Input
           name={'Password '}
-          value={ userPassword }
+          value={ userpassword }
           onChange={ handleLoginPassword }
         />
         <br/>
@@ -117,7 +117,6 @@ const LoginPage = () => {
         <ExtraFooter/>
         <br/>
         <br/>
-
       </MainBody>
     </>
   )
