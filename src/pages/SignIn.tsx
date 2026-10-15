@@ -6,6 +6,8 @@ import { Footer, ExtraFooter } from '@/components/Footer.tsx'
 import { Form } from '@/components/Form.tsx'
 import './LoginPage.tsx';
 import { MainBody } from '@/components/MainBody.tsx'
+import { LoadingModal } from '@/components/LoadingModal.tsx'
+import { toaster } from '@/components/ui/toaster'
 
 type SignInUser = {
   username: string
@@ -19,31 +21,42 @@ const signInUser = async (credentials: SignInUser) => {
     'userpassword': credentials.userpassword,
     'useremail': credentials.useremail,
   }
+  const [isLoading, setIsLoading] = useState<boolean>(false)
 
   const backendURL = 'https://'
 
-  const response = await fetch('http://localhost:8000/api/signup' || backendURL, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(formData),
-  });
+  try {
+    const response = await fetch('http://localhost:8000/api/signup' || backendURL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
 
-  const errorData = await response.json();
-  console.log('FULL ERROR:', JSON.stringify(errorData, null, 2));
+    const errorData = await response.json();
+    console.log('FULL ERROR:', JSON.stringify(errorData, null, 2));
 
-  if (!response.ok) {
-    throw new Error('Sign In failed')
-  };
+    toaster.create({ title: "Account created!", type: "success" })
 
-  return response.json()
+    if (!response.ok) {
+      throw new Error(errorData.detail || 'Sign In failed')
+    };
+    return response.json()
+  } catch (err: any) {
+    toaster.create({ title: "Error", description: err.message, type: "error" })
+  } finally {
+    setIsLoading(false)
+  }
 };
 
 const SignIn = () => {
   const [username, setUsername] = useState<string>('');
   const [userpassword, setUserPassword] = useState<string>('');
   const [useremail, setUserEmail] = useState<string>('');
+
+  const [isLoading, setIsLoading] = useState<boolean>(false)
+
 
   const mutation = useMutation({
     mutationFn: signInUser,
@@ -55,35 +68,33 @@ const SignIn = () => {
 
   const handleLogin = (event: MouseEvent) => {
     event.preventDefault();
+    setIsLoading(true)
     mutation.mutate({ username, useremail, userpassword });
 
     setUsername(event.target.value);
     setUserEmail(event.target.value);
     setUserPassword(event.target.value);
-
   }
 
   const handleLoginName = (event: MouseEvent) => {
     /*mutation.mutate({ username });*/
-
     setUsername(event.target.value);
   };
 
   const handleLoginEmail = (event: MouseEvent) => {
     /*mutation.mutate({ username });*/
-
     setUserEmail(event.target.value);
   };
 
   const handleLoginPassword = (event: MouseEvent) => {
     /*mutation.mutate({ username });*/
-
     setUserPassword(event.target.value);
   };
 
   return (
     <>
       <MainBody>
+        <LoadingModal isOpen={isLoading} message="Creating your account..."/>
         <GlowingHeader
           headerOne='$100M'
           headerThree=' Paid to members'
