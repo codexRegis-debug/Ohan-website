@@ -11,7 +11,7 @@ import {
 import { motion, AnimatePresence } from 'framer-motion';
 import { Check, X } from 'lucide-react'
 
-const MotionBox = motion(Box)
+const MotionBox = motion.create(Box)
 
 type Status = 'loading' | 'success' | 'error'
 

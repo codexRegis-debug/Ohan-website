@@ -23,31 +23,24 @@ const signInUser = async (credentials: SignInUser) => {
   }
   const [isLoading, setIsLoading] = useState<boolean>(false)
 
-  const backendURL = 'https://'
+  const response = await fetch('http://localhost:8000/api/signup' , {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(formData),
+  });
 
-  try {
-    const response = await fetch('http://localhost:8000/api/signup' || backendURL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    });
+  const errorData = await response.json();
+  console.log('FULL ERROR:', JSON.stringify(errorData, null, 2));
 
-    const errorData = await response.json();
-    console.log('FULL ERROR:', JSON.stringify(errorData, null, 2));
+  toaster.create({ title: "Account created!", type: "success" })
 
-    toaster.create({ title: "Account created!", type: "success" })
+  if (!response.ok) {
+    throw new Error(errorData.detail || 'Sign In failed')
+  };
+  return response.json()
 
-    if (!response.ok) {
-      throw new Error(errorData.detail || 'Sign In failed')
-    };
-    return response.json()
-  } catch (err: any) {
-    toaster.create({ title: "Error", description: err.message, type: "error" })
-  } finally {
-    setIsLoading(false)
-  }
 };
 
 const SignIn = () => {
