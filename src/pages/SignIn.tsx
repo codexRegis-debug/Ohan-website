@@ -15,41 +15,50 @@ type SignInUser = {
   useremail: string
 }
 
-const signInUser = async (credentials: SignInUser) => {
-  const formData = {
-    'username': credentials.username,
-    'userpassword': credentials.userpassword,
-    'useremail': credentials.useremail,
-  }
-  const [isLoading, setIsLoading] = useState<boolean>(false)
-
-  const response = await fetch('http://localhost:8000/api/signup' , {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(formData),
-  });
-
-  const errorData = await response.json();
-  console.log('FULL ERROR:', JSON.stringify(errorData, null, 2));
-
-  toaster.create({ title: "Account created!", type: "success" })
-
-  if (!response.ok) {
-    throw new Error(errorData.detail || 'Sign In failed')
-  };
-  return response.json()
-
-};
 
 const SignIn = () => {
   const [username, setUsername] = useState<string>('');
   const [userpassword, setUserPassword] = useState<string>('');
   const [useremail, setUserEmail] = useState<string>('');
+  const [modalOpen, setModalOpen] = useState(false)
+  const [modalStatus, setModalStatus] = useState<'loading'|'success'|'error'>('loading')
 
   const [isLoading, setIsLoading] = useState<boolean>(false)
 
+  const handleCloseModal = () => {
+    setModalOpen(true)
+
+    setTimeout(() => {
+      setModalStatus('loading')
+    }, 300)
+  }
+
+  const signInUser = async (credentials: SignInUser) => {
+    const formData = {
+      'username': credentials.username,
+      'userpassword': credentials.userpassword,
+      'useremail': credentials.useremail,
+    }
+
+    const response = await fetch('http://localhost:8000/api/signup' , {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const errorData = await response.json();
+    console.log('FULL ERROR:', JSON.stringify(errorData, null, 2));
+
+    /**toaster.create({ title: "Account created!", type: "success" }) **/
+
+    if (!response.ok) {
+      throw new Error(errorData.detail || 'Sign In failed')
+    };
+    return response.json()
+
+  };
 
   const mutation = useMutation({
     mutationFn: signInUser,
@@ -87,7 +96,6 @@ const SignIn = () => {
   return (
     <>
       <MainBody>
-        <LoadingModal isOpen={isLoading} message="Creating your account..."/>
         <GlowingHeader
           headerOne='$100M'
           headerThree=' Paid to members'
