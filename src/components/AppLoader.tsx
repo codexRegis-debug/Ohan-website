@@ -1,7 +1,7 @@
 import { Box, Flex } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 
-const MotionBox = motion(Box)
+const MotionBox = motion.create(Box)
 
 export const AppLoader = () => {
 
@@ -32,7 +32,6 @@ export const AppLoader = () => {
         >
           {Array.from({ length: 16 }).map((_, i) => {
             const waveIndex = gridOrder.indexOf(i)
-
             return (
               <MotionBox
                 key={i}
