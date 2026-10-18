@@ -9,10 +9,10 @@ import ContactUs from './pages/ContactUs.jsx';
 import AboutUs from './pages/AboutUs.jsx';
 import SignIn from './pages/SignIn.jsx';
 import LoginPage from './pages/LoginPage.tsx';
-import { AppLoader } from './components/AppLoader.tsx'
-import { GridBackground } from './components/GridBackground.tsx'
-import { Box } from '@chakra-ui/react'
-import { AnimatePresence } from 'framer-motion'
+import { AppLoader } from './components/AppLoader.tsx';
+import { GridBackground } from './components/GridBackground.tsx';
+import { Box } from '@chakra-ui/react';
+import { AnimatePresence } from 'framer-motion';
 
 const App = () => {
   const [clicked, isClicked] = useState<Dispatch<SetStateAction<boolean>>>(false)
