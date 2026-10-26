@@ -21,7 +21,7 @@ export const GridBackground = () => {
         bg='black'
         overflow='hidden'
         pointerEvents='none'
-        opacity={0.4}
+        opacity={0.98}
       >
         <Box
           position='absolute'
