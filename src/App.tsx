@@ -2,7 +2,7 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import  Navbar  from './components/Navbar.jsx';
-import Menu from './components/Menu.jsx'
+import Menu from './components/Menu.jsx';
 import { useState, useEffect, Dispatch, SetStateAction } from 'react';
 import Home from './pages/Home.jsx';
 import ContactUs from './pages/ContactUs.jsx';

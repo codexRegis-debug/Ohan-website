@@ -1,4 +1,4 @@
-/**/
+/* Navbar */
 import { Link, NavLink } from 'react-router-dom';
 import './Navbar.css';
 import { GiHamburgerMenu } from 'react-icons/gi';
