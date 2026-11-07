@@ -7,7 +7,6 @@ import { Form } from '@/components/Form.tsx'
 import './LoginPage.tsx';
 import { MainBody } from '@/components/MainBody.tsx'
 import { LoadingModal } from '@/components/LoadingModal.tsx'
-import { toaster } from '@/components/ui/toaster'
 
 type SignInUser = {
   username: string
@@ -15,81 +14,130 @@ type SignInUser = {
   useremail: string
 }
 
-const SignIn = () => {
-  const [username, setUsername] = useState<string>('');
-  const [userpassword, setUserPassword] = useState<string>('');
-  const [useremail, setUserEmail] = useState<string>('');
-  const [modalOpen, setModalOpen] = useState(false)
-  const [modalStatus, setModalStatus] = useState<'loading'|'success'|'error'>('loading')
+type SignInResponse = {
+  access_token: string
+}
 
-  const [isLoading, setIsLoading] = useState<boolean>(false)
+const signInUser = async (
+  credentials: SignInUser
+): Promise<SignInResponse> => {
 
-  const handleCloseModal = () => {
-    setModalOpen(true)
+  const controller = new AbortController();
 
-    setTimeout(() => {
-      setModalStatus('loading')
-    }, 300)
-  }
+  const timeout = setTimeout(() => {
+    controller.abort();
+  }, 15000)
 
-  const signInUser = async (credentials: SignInUser) => {
-    const formData = {
-      'username': credentials.username,
-      'userpassword': credentials.userpassword,
-      'useremail': credentials.useremail,
-    }
-
-    const response = await fetch('http://localhost:8000/api/signup' , {
+  try {
+    const response = await fetch(
+      'http://localhost:8000/api/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    });
+        },
+        body: JSON.stringify({
+          username: credentials.username,
+          useremail: credentials.useremail,
+          userpassword: credentials.userpassword,
+        }),
+        signal: controller.signal,
+      }
+    );
 
-    const errorData = await response.json();
-    console.log('FULL ERROR:', JSON.stringify(errorData, null, 2));
-
-    /**toaster.create({ title: "Account created!", type: "success" }) **/
+    const data = await response.json();
+    console.log('FULL ERROR:', JSON.stringify(data, null, 2));
 
     if (!response.ok) {
-      throw new Error(errorData.detail || 'Sign In failed')
+      throw new Error(data.detail || 'Sign In failed')
     };
-    return response.json()
 
-  };
+    return data
+
+  } catch (error) {
+    if (
+      error instanceof Error &&
+      error.name == 'AbortError'
+    ){
+      throw new Error('Request timed out. Please try again')
+    };
+    throw error
+
+  } finally {
+    clearTimeout(timeout)
+  }
+};
+
+const SignIn = () => {
+
+  // user's sign in info
+  const [username, setUsername] = useState<string>('');
+  const [userpassword, setUserPassword] = useState<string>('');
+  const [useremail, setUserEmail] = useState<string>('');
+
+  // loading modal's state
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const [modalStatus, setModalStatus] = useState<'loading'|'success'|'error'>('loading')
+
+  const [modalMessage, setModalMessage] = useState('');
 
   const mutation = useMutation({
     mutationFn: signInUser,
+
     onSuccess: (data) => {
       localStorage.setItem('token', data.access_token);
+
+      // display modal success
+      setModalStatus('success');
+      setModalMessage('Signin sucessful');
+
       console.log('Signin successful');
     },
+
+    onError: (error) => {
+      // display error message
+      setModalStatus('error')
+      setModalMessage(error.message || 'Sign in failed! Try again.')
+
+      console.log('Signin failed');
+    }
   });
 
   const handleLogin = (event: MouseEvent) => {
     event.preventDefault();
-    setIsLoading(true)
-    mutation.mutate({ username, useremail, userpassword });
 
-    setUsername(event.target.value);
-    setUserEmail(event.target.value);
-    setUserPassword(event.target.value);
-  }
+    if (mutation.isPending){
+      return;
+    }
 
-  const handleLoginName = (event: MouseEvent) => {
+    setModalOpen(true);
+    setModalStatus('loading');
+    setModalMessage('Verifying your credentials');
+
+    mutation.mutate({
+      username,
+      useremail,
+      userpassword,
+    });
+  };
+
+  const handleLoginName = (event: React.ChangeEvent<HTMLInputElement>) => {
     /*mutation.mutate({ username });*/
     setUsername(event.target.value);
   };
 
-  const handleLoginEmail = (event: MouseEvent) => {
+  const handleLoginEmail = (event: React.ChangeEvent<HTMLInputElement>) => {
     /*mutation.mutate({ username });*/
     setUserEmail(event.target.value);
   };
 
-  const handleLoginPassword = (event: MouseEvent) => {
+  const handleLoginPassword = (event: React.ChangeEvent<HTMLInputElement>) => {
     /*mutation.mutate({ username });*/
     setUserPassword(event.target.value);
+  };
+
+  const handleCloseModal = () => {
+    setModalOpen(false)
   };
 
   return (
@@ -137,6 +185,14 @@ const SignIn = () => {
         <ExtraFooter/>
         <br/>
       </MainBody>
+
+      {/*Loading Modal*/}
+      <LoadingModal
+        isOpen={modalOpen}
+        status={modalStatus}
+        message={modalMessage}
+        onClose={handleCloseModal}
+      />
     </>
   )
 };

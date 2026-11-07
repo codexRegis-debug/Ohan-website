@@ -1,4 +1,4 @@
-/**/
+/* Loading Page */
 import {
   Dialog,
   Spinner,
@@ -29,7 +29,7 @@ export const LoadingModal = ({isOpen, status,  message, onClose}: Props) => {
       case 'success':
         return { bg: 'green.500', title: 'Success!', defaultMsg: 'Login successful' }
       case 'error':
-        return { bg: 'red.500',  title: 'Failed!', defaultMsg: 'Something went wrong somewhere' }
+        return { bg: 'red.500',  title: 'Failed!', defaultMsg: 'Something went wrong, please check your credentials and try again' }
       default:
         return { bg: 'blue.500',  title: 'Please wait...', defaultMsg: 'Processing' }
     }
@@ -65,7 +65,7 @@ export const LoadingModal = ({isOpen, status,  message, onClose}: Props) => {
                   <VStack gap={5}>
                     <Box w='20' h='20' display='flex' justifyContent='center' alignItems='center'>
                       <AnimatePresence mode='wait'>
-                        {config.defaultMsg === 'Processing' && (
+                        {status === 'loading' && (
                           <MotionBox
                             key='spinner'
                             initial={{ opacity: 0 }}
@@ -76,7 +76,7 @@ export const LoadingModal = ({isOpen, status,  message, onClose}: Props) => {
                             <Spinner size="xl" color="blue.500" borderWidth="4px"/>
                           </MotionBox>
                         )}
-                        {config.defaultMsg === 'Login successful' && (
+                        {status === 'success' && (
                           <MotionBox
                             key='success'
                             initial={{ scale: 0 }}
@@ -93,7 +93,7 @@ export const LoadingModal = ({isOpen, status,  message, onClose}: Props) => {
                             <Icon as={Check} color='white' boxSize={8}/>
                           </MotionBox>
                         )}
-                        {config.defaultMsg === 'Something went wrong somewhere' && (
+                        {status === 'error' && (
                           <MotionBox
                             key='success'
                             initial={{ scale: 0 }}
