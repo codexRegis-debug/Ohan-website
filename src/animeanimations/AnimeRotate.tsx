@@ -16,7 +16,7 @@ const AnimeRotate = ({ line, words } : { line: string, words: string }) => {
     <div className='animeObject'
       style={{ backgroundColor:'black', width: '60%', height: '100px', margin: '4rem', color: 'white', marginTop: '100px', alignItems: 'center', textAlign: 'center' }}
     >
-      <h1 style={{ justifyItems: 'center', fontSize: '2.5rem', textAlign: 'center' }}> {line} </h1>
+      <h1 style={{ justifyItems: 'center', fontSize: '2rem', textAlign: 'center' }}> {line} </h1>
       <p style={{ justifyItems: 'center', fontSize: '1rem', textAlign: 'center', color: 'grey' }}>{words}</p>
     </div>
   )
