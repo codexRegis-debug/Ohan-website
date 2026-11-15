@@ -1,9 +1,8 @@
-/**/
+/*Contact Page*/
 import NewAnime from '@/components/NewAnime.tsx';
 import Effect from '@/animeanimations/Effect.jsx'
 
 const ContactUs = () => {
-
   return (
     <>
       <div
