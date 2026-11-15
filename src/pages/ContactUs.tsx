@@ -16,8 +16,9 @@ const ContactUs = () => {
       >
         <Effect>
           <NewAnime
-            text='Contact us'
-            content='Hello everyone'
+            text='Contact us here!'
+            content='Phone Number(s): 08175206448'
+            secondContent='Whatsapp: 08175206448'
           />
         </Effect>
         <br/>

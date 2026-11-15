@@ -1,9 +1,20 @@
+/**/
 import { useEffect } from 'react';
 import { animate } from 'animejs';
 import { chakra } from '@chakra-ui/react'
 import './NewAnime.css';
 
-const NewAnime = ({ text, content } : { text: string, content: string }) => {
+const NewAnime = ({
+  text,
+  content,
+  secondContent,
+  anotherSecondContent,
+} : {
+  text: string,
+  content: string,
+  secondContent?: string,
+  anotherSecondContent?: string
+}) => {
   useEffect(() => {
     animate('.ball', {
       translateY: -100,
@@ -31,6 +42,14 @@ const NewAnime = ({ text, content } : { text: string, content: string }) => {
         <chakra.p
           style={{justifyItems:'center', margin:'20px', fontSize:'18px', color:'lightgrey'}}>
           { content }
+        </chakra.p>
+        <chakra.p
+          style={{justifyItems:'center', margin:'20px', fontSize:'18px', color:'lightgrey'}}>
+          { secondContent }
+        </chakra.p>
+        <chakra.p
+          style={{justifyItems:'center', margin:'20px', fontSize:'18px', color:'lightgrey'}}>
+          { anotherSecondContent }
         </chakra.p>
       </chakra.div>
       <br/>
