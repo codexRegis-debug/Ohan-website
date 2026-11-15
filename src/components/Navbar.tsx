@@ -14,7 +14,7 @@ const Navbar = ({ clicked, isClicked } : { clicked: boolean, isClicked: (clicked
     <div className="Nav">
       <ul className="NavWrapper">
         <li className="Navlogo">
-          <Link className="Link" to="/"> Navbar</Link>
+          <Link className="Link" to="/">OHAN</Link>
         </li>
         <li className="NavItems">
           <NavLink className="Link" to="/"> Home</NavLink>

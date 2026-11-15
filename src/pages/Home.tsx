@@ -13,10 +13,10 @@ import NewAnime from '@/components/NewAnime.tsx';
 import AnimeRotate from '@/animeanimations/AnimeRotate.jsx';
 import AnimeGrid from '@/animeanimations/AnimeGrid.jsx';
 import Effect from '@/animeanimations/Effect.jsx';
-import './Home.css';
 import { MainBody } from '@/components/MainBody.tsx'
 import { TextField } from '@/components/MyChakra.tsx'
 import { chakra } from '@chakra-ui/react'
+import './Home.css';
 
 const listItems = [
   {

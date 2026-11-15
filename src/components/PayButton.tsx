@@ -27,7 +27,7 @@ const PayButton = ({ amount, label } : {amount: number, label: string}) => {
       /* Redirect to payment - user pays with any bank here */
       window.location.href = data.authorization_url
     } catch (event: any) {
-      toaster.create({ title: 'Payment failed', description: event.message, status: 'errot' })
+      toaster.create({ title: 'Payment failed', description: event.message, /* status: 'error' */ })
       setLoading(false)
     }
   }
