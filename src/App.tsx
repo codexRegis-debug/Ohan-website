@@ -1,4 +1,4 @@
-/**/
+/* ========= Main App Endpoint for Routes ========= */
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import  Navbar  from './components/Navbar.jsx';
@@ -13,6 +13,7 @@ import { AppLoader } from './components/AppLoader.tsx';
 import { GridBackground } from './components/GridBackground.tsx';
 import { Box } from '@chakra-ui/react';
 import { AnimatePresence } from 'framer-motion';
+import PaymentCallback from '@/pages/PaymentCallback.tsx';
 
 const App = () => {
   const [clicked, isClicked] = useState<Dispatch<SetStateAction<boolean>>>(false)
@@ -42,7 +43,8 @@ const App = () => {
                   <Route path="about-us" element={<AboutUs/>}/>
                   <Route path="sign-in" element={<SignIn/>}/>
                   <Route path="log-in" element={<LoginPage/>}/>
-                  <Route path="sign-up" element={<SignIn/>}/>
+                  <Route path="sign-up" element={<LoginPage/>}/>
+                  <Route path="payment-callbakc" element={<PaymentCallback/>}/>
                 </Routes>
               </Router>
             </div>

@@ -1,6 +1,6 @@
 /* Payment Button */
 import { useState } from 'react';
-import { Button, } from '@chakra-ui/react';
+import { Button } from '@chakra-ui/react';
 import { toaster } from '@/components/ui/toaster.tsx'
 
 const PayButton = ({ amount, label } : {amount: number, label: string}) => {

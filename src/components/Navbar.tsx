@@ -29,7 +29,7 @@ const Navbar = ({ clicked, isClicked } : { clicked: boolean, isClicked: (clicked
           <NavLink className="Link" to="/sign-in"> Sign In</NavLink>
         </li>
         <li className="NavButton">
-          <NavLink className="Link" to="/sign-up"> Sign Up</NavLink>
+          <NavLink className="Link" to="/sign-up"> Log In</NavLink>
         </li>
       </ul>
       {!clicked ? (
